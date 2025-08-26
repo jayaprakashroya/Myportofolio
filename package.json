@@ -1,0 +1,17 @@
+{
+  "name": "personalportfolio",
+  "version": "1.0.0",
+  "description": "An attractive and modern portfolio website designed to impress recruiters",
+  "main": "server.js",
+  "scripts": {
+    "start": "npx react-scripts start"
+  },
+  "author": "Jaya Prakash Maneri",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^5.1.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-scripts": "^0.0.0"
+  }
+}
