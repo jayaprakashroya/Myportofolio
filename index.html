@@ -1,0 +1,828 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--
+  <p>
+    Hi, I'm Jaya Prakash Maneri<br>
+    B.Tech Computer Science Student | Full-Stack Developer | Data Analytics Enthusiast
+  </p>
+  <p>
+    I am passionate about building scalable web applications and leveraging data for impactful insights. Currently pursuing B.Tech in Computer Science at Sanskrithi School of Engineering (CGPA: 7.7/10). I have hands-on experience in full-stack development, API integration, and data analytics, and completed a Data Analytics internship at SmartBridge.
+    <br><br>
+    <b>Key Skills:</b> React.js, TypeScript, JavaScript, Java, Python, SQL, Tableau, AWS, Git, Agile/Scrum.<br>
+    <b>Certifications:</b> Google AI-ML, AWS Cloud, Generative AI (Eduskill), Salesforce Trailblazer Champion.<br>
+    <b>Languages:</b> Telugu (Native), English (Intermediate), Hindi (Beginner).
+  </p>
+-->
+  <link rel="stylesheet" href="./assets/css/style.css">
+
+  <!--
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<!--
+  <p>
+    Hi, I'm Jaya Prakash Maneri<br>
+    B.Tech Computer Science Student | Full-Stack Developer | Data Analytics Enthusiast
+  </p>
+  <p>
+    I am passionate about building scalable web applications and leveraging data for impactful insights. Currently pursuing B.Tech in Computer Science at Sanskrithi School of Engineering (CGPA: 7.7/10). I have hands-on experience in full-stack development, API integration, and data analytics, and completed a Data Analytics internship at SmartBridge.
+    <br><br>
+    <b>Key Skills:</b> React.js, TypeScript, JavaScript, Java, Python, SQL, Tableau, AWS, Git, Agile/Scrum.<br>
+    <b>Certifications:</b> Google AI-ML, AWS Cloud, Generative AI (Eduskill), Salesforce Trailblazer Champion.<br>
+    <b>Languages:</b> Telugu (Native), English (Intermediate), Hindi (Beginner).
+  </p>
+-->
+  <div class="layout-container" style="display: flex; align-items: flex-start;">
+  <aside class="sidebar" data-sidebar>
+      <div class="sidebar-info">
+        <figure class="avatar-box">
+          <img src="./assets/images/avatar.jpg" alt="Jaya Prakash Maneri" width="80">
+        </figure>
+        <div class="info-content">
+          <h1 class="name" title="Jaya Prakash Maneri">Jaya Prakash Maneri</h1>
+          <p class="title">B.Tech Computer Science Student </p>
+        </div>
+        <button class="info_more-btn" data-sidebar-btn>
+          <span>Show Contacts</span>
+          <ion-icon name="chevron-down"></ion-icon>
+        </button>
+      </div>
+      <div class="sidebar-info_more">
+        <div class="separator"></div>
+        <ul class="contacts-list">
+          <li class="contact-item">
+            <div class="icon-box">
+              <ion-icon name="mail-outline"></ion-icon>
+            </div>
+            <div class="contact-info">
+              <p class="contact-title">Email</p>
+              <a href="mailto:manerijayaprakash@gmail.com" class="contact-link">manerijayaprakash@gmail.com</a>
+            </div>
+          </li>
+          <li class="contact-item">
+            <div class="icon-box">
+              <ion-icon name="phone-portrait-outline"></ion-icon>
+            </div>
+            <div class="contact-info">
+              <p class="contact-title">Phone</p>
+              <a href="tel:+919014792534" class="contact-link">+91 90147 92534</a>
+            </div>
+          </li>
+          <li class="contact-item">
+            <div class="icon-box">
+              <ion-icon name="calendar-outline"></ion-icon>
+            </div>
+            <div class="contact-info">
+              <p class="contact-title">Birthday</p>
+              <time datetime="2005-07-14">14 July, 2005</time>
+            </div>
+          </li>
+          <li class="contact-item">
+            <div class="icon-box">
+              <ion-icon name="location-outline"></ion-icon>
+            </div>
+            <div class="contact-info">
+              <p class="contact-title">Location</p>
+              <address>Puttaparthi, India</address>
+            </div>
+          </li>
+          <li class="contact-item">
+            <div class="icon-box">
+              <ion-icon name="document-outline"></ion-icon>
+            </div>
+            <div class="contact-info">
+              <p class="contact-title">Resume</p>
+              <a href="./assets/resume.pdf" class="contact-link" download>Download Resume</a>
+            </div>
+          </li>
+        </ul>
+        <div class="separator"></div>
+        <ul class="social-list">
+          <li class="social-item">
+            <a href="https://www.linkedin.com/in/maneri-jaya-prakash" class="social-link" target="_blank">
+              <ion-icon name="logo-linkedin"></ion-icon>
+            </a>
+          </li>
+          <li class="social-item">
+            <a href="https://github.com/jayaprakashmaneri" class="social-link" target="_blank">
+              <ion-icon name="logo-github"></ion-icon>
+            </a>
+          </li>
+          <li class="social-item">
+            <a href="#" class="social-link">
+              <ion-icon name="logo-instagram"></ion-icon>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+  </aside>
+
+
+
+
+
+    <!--
+      - #main-content
+    -->
+
+  <div class="main-content">
+
+      <!--
+        - #NAVBAR
+      -->
+
+      <nav class="navbar" style="display: flex; justify-content: flex-end;">
+        <ul class="navbar-list" style="display: flex; gap: 1.5em;">
+          <li class="navbar-item">
+            <button class="navbar-link active" data-nav-link="about">about</button>
+          </li>
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link="resume">resume</button>
+          </li>
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link="portfolio">portfolio</button>
+          </li>
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link="blog">blog</button>
+          </li>
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link="education">education</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link="activities">Additional Activities</button>
+          </li>
+
+        </ul>
+      </nav>
+
+
+
+
+
+
+      <!--
+        - #ADDITIONAL ACTIVITIES
+      -->
+
+      <article class="activities" data-page="activities">
+        <header>
+          <h2 class="h2 article-title">Additional Activities</h2>
+        </header>
+        <section class="activities-gallery">
+          <div style="display: flex; flex-wrap: wrap; gap: 1.5em; justify-content: center;">
+            <figure>
+              <img src="./assets/images/Achievements.jpg" alt="Achievements" style="max-width: 200px; border-radius: 10px;">
+              <figcaption>Achievements</figcaption>
+            </figure>
+            <figure>
+              <img src="./assets/images/certifications.jpg" alt="Certifications" style="max-width: 200px; border-radius: 10px;">
+              <figcaption>Certifications</figcaption>
+            </figure>
+            <figure>
+              <img src="./assets/images/image1.jpg" alt="Activity 1" style="max-width: 200px; border-radius: 10px;">
+              <figcaption>Activity 1</figcaption>
+            </figure>
+            <figure>
+              <img src="./assets/images/image2.jpg" alt="Activity 2" style="max-width: 200px; border-radius: 10px;">
+              <figcaption>Activity 2</figcaption>
+            </figure>
+            <figure>
+              <img src="./assets/images/impact.jpg" alt="Impact" style="max-width: 200px; border-radius: 10px;">
+              <figcaption>Impact</figcaption>
+            </figure>
+            <figure>
+              <img src="./assets/images/internship.jpg" alt="Internship" style="max-width: 200px; border-radius: 10px;">
+              <figcaption>Internship</figcaption>
+            </figure>
+            <figure>
+              <img src="./assets/images/lanuages.jpg" alt="Languages" style="max-width: 200px; border-radius: 10px;">
+              <figcaption>Languages</figcaption>
+            </figure>
+            <figure>
+              <img src="./assets/images/logo.ico" alt="Logo" style="max-width: 100px; border-radius: 10px;">
+              <figcaption>Logo</figcaption>
+            </figure>
+            <figure>
+              <img src="./assets/images/logogithub.png" alt="GitHub Logo" style="max-width: 100px; border-radius: 10px;">
+              <figcaption>GitHub Logo</figcaption>
+            </figure>
+            <figure>
+              <img src="./assets/images/logolinkedin.png" alt="LinkedIn Logo" style="max-width: 100px; border-radius: 10px;">
+              <figcaption>LinkedIn Logo</figcaption>
+            </figure>
+            <figure>
+              <img src="./assets/images/use.jpg" alt="Use" style="max-width: 200px; border-radius: 10px;">
+              <figcaption>Use</figcaption>
+            </figure>
+          </div>
+        </section>
+      </article>
+
+      <!--
+        - #ABOUT
+      -->
+
+  <article class="about  active" data-page="about">
+
+        <header>
+          <h2 class="h2 article-title">About me</h2>
+        </header>
+        <section class="about-text">
+          <p>
+            I am a B.Tech Computer Science student (Graduating 2026, CGPA: 7.7/10) with skills in frontend development (React.js, JavaScript/TypeScript, HTML/CSS) and backend (Java, SQL, Python). Completed a Data Analytics internship building dashboards and improving reporting efficiency.
+          </p>
+          <p>
+            Experienced in full-stack applications, API integration, and responsive UIs. Certified in Google AI-ML, AWS Cloud, and Generative AI. Comfortable using AI-assisted coding tools and eager to contribute to scalable, user-focused products.
+          </p>
+        </section>
+        <!--
+          - service
+        -->
+        <section class="service">
+
+          <h3 class="h3 service-title">What I'm doing</h3>
+
+          <ul class="service-list">
+
+            <li class="service-item">
+
+              <div class="service-icon-box">
+          <img src="./assets/images/icon-dev.svg" alt="Full-Stack Development icon" width="40">
+              </div>
+
+              <div class="service-content-box">
+          <h4 class="h4 service-item-title">Full-Stack Development</h4>
+
+          <p class="service-item-text">
+            Building responsive web applications with React.js, JavaScript/TypeScript, HTML/CSS, Java, Python, and
+            SQL.
+          </p>
+
+              </div>
+
+            </li>
+
+            <li class="service-item">
+
+              <div class="service-icon-box">
+          <img src="./assets/images/icon-design.svg" alt="Data Analytics icon" width="40">
+              </div>
+
+              <div class="service-content-box">
+          <h4 class="h4 service-item-title">Data Analytics</h4>
+
+          <p class="service-item-text">
+            Analyzing data and creating insightful visualizations using Tableau and SQL to drive business
+            decisions.
+          </p>
+
+              </div>
+
+            </li>
+
+            <li class="service-item">
+
+              <div class="service-icon-box">
+          <img src="./assets/images/icon-quote.svg" alt="AI Enthusiast icon" width="40">
+              </div>
+
+              <div class="service-content-box">
+          <h4 class="h4 service-item-title">AI Enthusiast</h4>
+
+          <p class="service-item-text">
+            Exploring and implementing AI-assisted coding tools like Copilot, ChatGPT, Perplexity, and Gemini to
+            enhance development workflows.
+          </p>
+
+              </div>
+
+            </li>
+
+            <li class="service-item">
+
+              <div class="service-icon-box">
+          <img src="./assets/images/icon-design.svg" alt="Team Collaboration icon" width="40">
+              </div>
+
+              <div class="service-content-box">
+          <h4 class="h4 service-item-title">Team Collaboration</h4>
+
+          <p class="service-item-text">
+            Collaborating effectively in Agile/Scrum environments to deliver high-quality software solutions.
+          </p>
+
+              </div>
+
+            </li>
+
+          </ul>
+
+        </section>
+
+
+        <!--
+          - testimonials
+        -->
+
+        <section class="testimonials">
+
+          <h3 class="h3 testimonials-title">Achievements &amp; Impact</h3>
+
+          <div class="testimonials-list has-scrollbar">
+
+            <div class="testimonials-item">
+              <div class="content-card" style="padding: 20px;">
+          <h4 class="h4 testimonials-item-title" style="margin-bottom: 10px;">Key Achievements</h4>
+          <ul style="list-style-type: disc; padding-left: 20px;">
+            <li><b>Google AI-ML Certification, AWS Cloud, Generative AI (Eduskill)</b></li>
+            <li><b>Salesforce Trailblazer Champion</b> (27 Badges, 6600 Points)</li>
+            <li><b>Merit-based B.Tech scholarship</b></li>
+            <li>Actively participated in <b>Hackathons and coding competitions</b></li>
+          </ul>
+              </div>
+            </div>
+
+            <div class="testimonials-item">
+              <div class="content-card" style="padding: 20px;">
+          <h4 class="h4 testimonials-item-title" style="margin-bottom: 10px;">Internship Impact</h4>
+          <ul style="list-style-type: disc; padding-left: 20px;">
+            <li>Improved reporting speed by <b>40%</b> through SQL query optimization.</li>
+            <li>Built Tableau dashboards for analyzing <b>500+ student records</b>.</li>
+          </ul>
+              </div>
+            </div>
+
+            <div class="testimonials-item">
+              <div class="content-card" style="padding: 20px;">
+          <h4 class="h4 testimonials-item-title" style="margin-bottom: 10px;">Project Highlights</h4>
+          <ul style="list-style-type: disc; padding-left: 20px;">
+            <li>Developed a <b>Student Performance Dashboard</b> with React, Tableau, and SQL.</li>
+            <li>Created an <b>Online Bookstore</b> with React, Java, MySQL, and REST APIs.</li>
+            <li>Designed a responsive <b>Portfolio Website</b> with React, HTML, CSS, and JavaScript.</li>
+          </ul>
+              </div>
+            </div>
+
+          </div>
+
+        </section>
+
+
+        </article>
+
+
+      <!--
+        - #RESUME
+      -->
+
+  <article class="resume" data-page="resume">
+        <section class="service">
+          <h3 class="h3 service-title">What I'm doing</h3>
+          <ul class="service-list">
+            <li class="service-item">
+              <div class="service-icon-box">
+                <img src="./assets/images/icon-dev.svg" alt="Full-Stack Developer" width="40">
+              </div>
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Full-Stack Development</h4>
+                <p class="service-item-text">
+                  Building responsive web applications with React.js, JavaScript/TypeScript, HTML/CSS, Java, Python, and SQL.
+                </p>
+              </div>
+            </li>
+            <li class="service-item">
+              <div class="service-icon-box">
+                <img src="./assets/images/icon-design.svg" alt="Data Analytics" width="40">
+              </div>
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Data Analytics</h4>
+                <p class="service-item-text">
+                  Analyzing data and creating insightful visualizations using Tableau and SQL to drive business decisions.
+                </p>
+              </div>
+            </li>
+            <li class="service-item">
+              <div class="service-icon-box">
+                <img src="./assets/images/icon-quote.svg" alt="AI Enthusiast" width="40">
+              </div>
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">AI Enthusiast</h4>
+                <p class="service-item-text">
+                  Using AI-assisted coding tools (Copilot, ChatGPT, Perplexity, Gemini) to enhance development workflows.
+                </p>
+              </div>
+            </li>
+            <li class="service-item">
+              <div class="service-icon-box">
+                <img src="./assets/images/icon-design.svg" alt="Team Collaboration" width="40">
+              </div>
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Team Collaboration</h4>
+                <p class="service-item-text">
+                  Agile/Scrum methodologies, effective team communication, and project delivery.
+                </p>
+              </div>
+            </li>
+          </ul>
+        </section>
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">Academic Projects, Sanskrithi School of Engineering</h4>
+              <span>2022 – Present</span>
+              <p class="timeline-text">
+                Led multiple full-stack development projects as part of computer science curriculum:<br>
+                - Developed Student Performance Dashboard with React and Tableau<br>
+                - Built Online Bookstore with Java backend and MySQL database<br>
+                - Created responsive Portfolio Website with modern design principles
+              </p>
+            </li>
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">Salesforce Ecosystem, Trailblazer Community</h4>
+              <span>2023 – Present</span>
+              <p class="timeline-text">
+                Active participant in Salesforce learning ecosystem with consistent progress:<br>
+                - Earned 27 Trailblazer badges demonstrating platform expertise<br>
+                - Accumulated 6600+ points through hands-on learning modules<br>
+                - Achieved Trailblazer Champion status through consistent engagement
+              </p>
+            </li>
+          </ol>
+        </section>
+        <section class="timeline">
+          <div class="title-wrapper">
+            <div class="icon-box"><ion-icon name="book-outline"></ion-icon></div>
+            <h3 class="h3">Professional Impact</h3>
+          </div>
+          <ol class="timeline-list">
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">Measurable contributions during internship and academic projects</h4>
+              <p class="timeline-text">
+                <b>40%</b> Query Performance Improvement<br>
+                <b>500+</b> Records Analyzed<br>
+                <b>27</b> Salesforce Badges Earned<br>
+                <b>3</b> Major Projects Completed
+              </p>
+            </li>
+          </ol>
+        </section>
+      </article>
+
+
+
+
+
+      <!--
+        - #PORTFOLIO
+      -->
+
+  <article class="portfolio" data-page="portfolio">
+        <header>
+          <h2 class="h2 article-title">Featured Projects</h2>
+        </header>
+        <section class="projects">
+          <ul class="project-list">
+            <li class="project-item active">
+              <a href="#">
+                <figure class="project-img">
+                  <img src="./assets/images/project1.jpg" alt="Student Performance Dashboard" loading="lazy">
+                </figure>
+                <h3 class="project-title">Student Performance Dashboard</h3>
+                <p class="project-category">Interactive dashboard for analyzing 500+ student records with advanced data visualizations and API integration.</p>
+                <ul>
+                  <li>Built dashboard for 500+ student records</li>
+                  <li>Advanced data visualizations</li>
+                  <li>SQL query optimization (40% faster reporting)</li>
+                  <li>Real-time API integration</li>
+                </ul>
+                <b>Technologies Used:</b> React, Tableau, SQL, REST APIs<br>
+                <a href="#" class="btn">Live Demo</a> <a href="#" class="btn">Source Code</a>
+              </a>
+            </li>
+            <li class="project-item active">
+              <a href="#">
+                <figure class="project-img">
+                  <img src="./assets/images/project2.jpg" alt="Online Bookstore" loading="lazy">
+                </figure>
+                <h3 class="project-title">Online Bookstore</h3>
+                <p class="project-category">Full-stack e-commerce application with user authentication, CRUD operations, and responsive design.</p>
+                <ul>
+                  <li>User authentication and authorization</li>
+                  <li>Complete CRUD operations</li>
+                  <li>Responsive UI design</li>
+                  <li>Database query optimization (25% faster)</li>
+                  <li>Shopping cart functionality</li>
+                </ul>
+                <b>Technologies Used:</b> React, Java, MySQL, REST APIs<br>
+                <a href="#" class="btn">Live Demo</a> <a href="#" class="btn">Source Code</a>
+              </a>
+            </li>
+            <li class="project-item active">
+              <a href="#">
+                <figure class="project-img">
+                  <img src="./assets/images/project3.jpg" alt="Portfolio Website" loading="lazy">
+                </figure>
+                <h3 class="project-title">Portfolio Website</h3>
+                <p class="project-category">Modern, responsive portfolio website showcasing projects and achievements with accessibility features.</p>
+                <ul>
+                  <li>Fully responsive design</li>
+                  <li>Dark/light mode toggle</li>
+                  <li>Accessibility features</li>
+                  <li>Modern UI/UX design</li>
+                  <li>Cross-browser compatibility</li>
+                </ul>
+                <b>Technologies Used:</b> React, HTML, CSS, JavaScript<br>
+                <a href="#" class="btn">Live Demo</a> <a href="#" class="btn">Source Code</a>
+              </a>
+            </li>
+          </ul>
+        </section>
+      </article>
+
+
+
+      <!--
+        - #BLOG
+      -->
+
+  <article class="blog" data-page="blog">
+
+        <header>
+          <h2 class="h2 article-title">Projects and Activities</h2>
+        </header>
+
+        <section class="blog-posts">
+
+          <ul class="blog-posts-list">
+
+        <li class="blog-post-item">
+          <a href="#">
+
+        <figure class="blog-banner-box">
+          <img src="./assets/images/project1.jpg" alt="Student Performance Dashboard" loading="lazy">
+        </figure>
+
+        <div class="blog-content">
+
+          <div class="blog-meta">
+        <p class="blog-category">React, Tableau, SQL</p>
+
+        <span class="dot"></span>
+
+        <time datetime="2023-12-15">Dec 15, 2023</time>
+          </div>
+
+          <h3 class="h3 blog-item-title">Student Performance Dashboard</h3>
+
+          <p class="blog-text">
+        Developed an interactive dashboard to analyze student performance using React, Tableau, and SQL.
+          </p>
+
+        </div>
+
+          </a>
+        </li>
+
+        <li class="blog-post-item">
+          <a href="#">
+
+        <figure class="blog-banner-box">
+          <img src="./assets/images/project2.jpg" alt="Online Bookstore" loading="lazy">
+        </figure>
+
+        <div class="blog-content">
+
+          <div class="blog-meta">
+        <p class="blog-category">React, Java, MySQL</p>
+
+        <span class="dot"></span>
+
+        <time datetime="2023-11-20">Nov 20, 2023</time>
+          </div>
+
+          <h3 class="h3 blog-item-title">Online Bookstore</h3>
+
+          <p class="blog-text">
+        Built a full-stack e-commerce application with user authentication and CRUD operations using React, Java, and MySQL.
+          </p>
+
+        </div>
+
+          </a>
+        </li>
+
+        <li class="blog-post-item">
+          <a href="#">
+
+        <figure class="blog-banner-box">
+          <img src="./assets/images/project3.jpg" alt="Portfolio Website" loading="lazy">
+        </figure>
+
+        <div class="blog-content">
+
+          <div class="blog-meta">
+        <p class="blog-category">React, HTML, CSS</p>
+
+        <span class="dot"></span>
+
+        <time datetime="2023-10-01">Oct 1, 2023</time>
+          </div>
+
+          <h3 class="h3 blog-item-title">Portfolio Website</h3>
+
+          <p class="blog-text">
+        Designed and developed a modern, responsive portfolio website showcasing projects and achievements using React, HTML, and CSS.
+          </p>
+
+        </div>
+
+          </a>
+        </li>
+
+        <li class="blog-post-item">
+          <a href="#">
+
+        <figure class="blog-banner-box">
+          <img src="./assets/images/blog-4.jpg" alt="SmartBridge Internship" loading="lazy">
+        </figure>
+
+        <div class="blog-content">
+
+          <div class="blog-meta">
+        <p class="blog-category">Data Analytics</p>
+
+        <span class="dot"></span>
+
+        <time datetime="2025-08-31">Aug 31, 2025</time>
+          </div>
+
+          <h3 class="h3 blog-item-title">Data Analytics Internship at SmartBridge</h3>
+
+          <p class="blog-text">
+        Gained hands-on experience in data analytics, building Tableau dashboards, and optimizing SQL queries.
+          </p>
+
+        </div>
+
+          </a>
+        </li>
+
+        <li class="blog-post-item">
+          <a href="#">
+
+        <figure class="blog-banner-box">
+          <img src="./assets/images/blog-5.jpg" alt="Salesforce Trailblazer" loading="lazy">
+        </figure>
+
+        <div class="blog-content">
+
+          <div class="blog-meta">
+        <p class="blog-category">Salesforce</p>
+
+        <span class="dot"></span>
+
+        <time datetime="2024-02-29">Feb 29, 2024</time>
+          </div>
+
+          <h3 class="h3 blog-item-title">Salesforce Trailblazer Community</h3>
+
+          <p class="blog-text">
+        Actively participating in the Salesforce learning ecosystem and achieving Trailblazer Champion status.
+          </p>
+
+        </div>
+
+          </a>
+        </li>
+
+        <li class="blog-post-item">
+          <a href="#">
+
+        <figure class="blog-banner-box">
+          <img src="./assets/images/blog-6.jpg" alt="Hackathons" loading="lazy">
+        </figure>
+
+        <div class="blog-content">
+
+          <div class="blog-meta">
+        <p class="blog-category">Coding Competitions</p>
+
+        <span class="dot"></span>
+
+        <time datetime="2024-03-15">Mar 15, 2024</time>
+          </div>
+
+          <h3 class="h3 blog-item-title">Participating in Hackathons and Coding Competitions</h3>
+
+          <p class="blog-text">
+        Sharpening skills and collaborating with peers in hackathons and coding competitions.
+          </p>
+
+        </div>
+
+          </a>
+        </li>
+
+          </ul>
+
+        </section>
+
+      </article>
+
+
+
+
+
+      <!--
+        - #CONTACT
+      -->
+
+
+<!-- Contact Article -->
+<article class="contact" data-page="contact">
+  <header>
+    <h2 class="h2 article-title">Contact</h2>
+  </header>
+  <section class="mapbox" data-mapbox>
+    <figure>
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.034927927927!2d78.7497096749271!3d14.15119928969806!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bbf5e0a7a3a1a3d%3A0x7a1a1a1a1a1a1a1a!2sPuttaparthi%2C%20Andhra%20Pradesh%2C%20India!5e0!3m2!1sen!2sin!4v1680000000000!5m2!1sen!2sin"
+        width="400" height="300" loading="lazy">
+      </iframe>
+    </figure>
+  </section>
+  <section class="contact-form">
+    <h3 class="h3 form-title">Contact Form</h3>
+    <form id="contactForm" class="form">
+      <div class="input-wrapper">
+        <input type="text" name="fullname" id="fullname" class="form-input" placeholder="Full name" required>
+        <input type="email" name="email" id="email" class="form-input" placeholder="Email address" required>
+      </div>
+      <textarea name="message" id="message" class="form-input" placeholder="Your Message" required></textarea>
+      <button class="form-btn" type="submit">
+        <ion-icon name="paper-plane"></ion-icon>
+        <span>Send Message</span>
+      </button>
+    </form>
+  </section>
+</article>
+
+<!-- Education Article - Now a SIBLING, not nested inside contact -->
+<article class="education" data-page="education">
+  <header>
+    <h2 class="h2 article-title">Education</h2>
+  </header>
+  <section class="timeline">
+    <ol class="timeline-list">
+      <li class="timeline-item">
+        <h4 class="h4 timeline-item-title">B.Tech in Computer Science</h4>
+        <span>2022 – 2026</span>
+        <p class="timeline-text">
+          Sanskrithi School of Engineering, Anantapur, India<br>
+          CGPA: 7.7/10
+        </p>
+      </li>
+      <li class="timeline-item">
+        <h4 class="h4 timeline-item-title">Class XII, AP State Board</h4>
+        <span>2022</span>
+        <p class="timeline-text">Score: 84.9%</p>
+      </li>
+      <li class="timeline-item">
+        <h4 class="h4 timeline-item-title">Class X, AP State Board</h4>
+        <span>2020</span>
+        <p class="timeline-text">Score: 94%</p>
+      </li>
+    </ol>
+  </section>
+</article>
+
+      </div>
+    </div>
+
+  </main>
+
+
+
+
+
+
+  <!--
+    - custom js link
+  -->
+  <script src="./assets/js/script.js"></script>
+
+
+  <!--
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>
