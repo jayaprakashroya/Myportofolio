@@ -138,7 +138,7 @@ document.addEventListener('DOMContentLoaded', function () {
         formData[input.name] = input.value;
       });
       try {
-        const response = await fetch('https://backend-of-my-portofolio-1.onrender.com/api/contact', {
+        const response = await fetch('https://backend-of-my-portofolio-3.onrender.com/api/contact', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json'
