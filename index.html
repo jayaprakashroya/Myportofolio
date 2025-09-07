@@ -545,10 +545,6 @@ project<!DOCTYPE html>
               </a>
             </li>
           </ul>
-        </        g        git add .
-        git commit -m "Replace old portfolio with new cleaned version"
-        git push origin main
-
 
 
 
@@ -558,66 +554,57 @@ project<!DOCTYPE html>
       -->
 
 
-<!-- Contact Article -->
-<article class="contact" data-page="contact">
-  <header>
-    <h2 class="h2 article-title">Contact</h2>
-  </header>
-  <section class="mapbox" data-mapbox>
-    <figure>
-      <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.034927927927!2d78.7497096749271!3d14.15119928969806!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bbf5e0a7a3a1a3d%3A0x7a1a1a1a1a1a1a1a!2sPuttaparthi%2C%20Andhra%20Pradesh%2C%20India!5e0!3m2!1sen!2sin!4v1680000000000!5m2!1sen!2sin"
-        width="400" height="300" loading="lazy">
-      </iframe>
-    </figure>
-  </section>
-  <section class="contact-form">
-    <h3 class="h3 form-title">Contact Form</h3>
-    <form id="contactForm" class="form" data-form>
-      <div class="input-wrapper">
-        <input type="text" name="fullname" id="fullname" class="form-input" data-form-input placeholder="Full name" required>
-        <input type="email" name="email" id="email" class="form-input" data-form-input placeholder="Email address" required>
-      </div>
-      <textarea name="message" id="message" class="form-input" data-form-input placeholder="Your Message" required></textarea>
-      <button class="form-btn" data-form-btn type="submit">
-        <ion-icon name="paper-plane"></ion-icon>
-        <span>Send Message</span>
-      </button>
-    </form>
-  </section>
-</article>
-
-<!-- Education Article - Now a SIBLING, not nested inside contact -->
-<article class="education" data-page="education">
-  <header>
-    <h2 class="h2 article-title">Education</h2>
-  </header>
-  <section class="timeline">
-    <ol class="timeline-list">
-      <li class="timeline-item">
-        <h4 class="h4 timeline-item-title">B.Tech in Computer Science</h4>
-        <span>2022 – 2026</span>
-        <p class="timeline-text">
-          Sanskrithi School of Engineering, Anantapur, India<br>
-          CGPA: 7.7/10
-        </p>
-      </li>
-      <li class="timeline-item">
-        <h4 class="h4 timeline-item-title">Class XII, AP State Board</h4>
-        <span>2022</span>
-        <p class="timeline-text">Score: 84.9%</p>
-      </li>
-      <li class="timeline-item">
-        <h4 class="h4 timeline-item-title">Class X, AP State Board</h4>
-        <span>2020</span>
-        <p class="timeline-text">Score: 94%</p>
-      </li>
-    </ol>
-  </section>
-</article>
-
-      </div>
-    </div>
+        <header>
+          <h2 class="h2 article-title">Featured Projects</h2>
+        </header>
+        <section class="projects">
+          <div class="testimonials-list has-scrollbar">
+            <div class="testimonials-item content-card">
+              <figure class="project-img">
+                <img src="./assets/images/project1.jpg" alt="Student Performance Dashboard" loading="lazy">
+              </figure>
+              <h4 class="h4 testimonials-item-title" style="margin-bottom: 10px;">Student Performance Dashboard</h4>
+              <ul style="list-style-type: disc; padding-left: 20px;">
+                <li>Built dashboard for 500+ student records</li>
+                <li>Advanced data visualizations</li>
+                <li>SQL query optimization (40% faster reporting)</li>
+                <li>Real-time API integration</li>
+              </ul>
+              <b>Technologies Used:</b> React, Tableau, SQL, REST APIs<br>
+              <a href="#" class="btn">Live Demo</a> <a href="#" class="btn">Source Code</a>
+            </div>
+            <div class="testimonials-item content-card">
+              <figure class="project-img">
+                <img src="./assets/images/project2.jpg" alt="Online Bookstore" loading="lazy">
+              </figure>
+              <h4 class="h4 testimonials-item-title" style="margin-bottom: 10px;">Online Bookstore</h4>
+              <ul style="list-style-type: disc; padding-left: 20px;">
+                <li>User authentication and authorization</li>
+                <li>Complete CRUD operations</li>
+                <li>Responsive UI design</li>
+                <li>Database query optimization (25% faster)</li>
+                <li>Shopping cart functionality</li>
+              </ul>
+              <b>Technologies Used:</b> React, Java, MySQL, REST APIs<br>
+              <a href="#" class="btn">Live Demo</a> <a href="#" class="btn">Source Code</a>
+            </div>
+            <div class="testimonials-item content-card">
+              <figure class="project-img">
+                <img src="./assets/images/project3.jpg" alt="Portfolio Website" loading="lazy">
+              </figure>
+              <h4 class="h4 testimonials-item-title" style="margin-bottom: 10px;">Portfolio Website</h4>
+              <ul style="list-style-type: disc; padding-left: 20px;">
+                <li>Fully responsive design</li>
+                <li>Dark/light mode toggle</li>
+                <li>Accessibility features</li>
+                <li>Modern UI/UX design</li>
+                <li>Cross-browser compatibility</li>
+              </ul>
+              <b>Technologies Used:</b> React, HTML, CSS, JavaScript<br>
+              <a href="#" class="btn">Live Demo</a> <a href="#" class="btn">Source Code</a>
+            </div>
+          </div>
+        </section>
 
   </main>
 
