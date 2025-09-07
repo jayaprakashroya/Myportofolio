@@ -80,19 +80,31 @@ document.addEventListener('DOMContentLoaded', function () {
   // custom select variables
   const select = document.querySelector("[data-select]");
   const selectItems = document.querySelectorAll("[data-select-item]");
-  const selectValue = document.querySelector("[data-selecct-value]");
+  const selectValue = document.querySelector("[data-select-value]");
+
+  // Fix for missing null check on selectValue in selectItems click event
+  selectItems.forEach(function (item) {
+    item.addEventListener("click", function () {
+      if (selectValue) {
+        selectValue.innerText = item.innerText;
+        elementToggleFunc(select);
+        filterFunc(item.innerText.toLowerCase());
+      }
+    });
+  });
   const filterBtn = document.querySelectorAll("[data-filter-btn]");
   if (select) {
     select.addEventListener("click", function () { elementToggleFunc(select); });
   }
   selectItems.forEach(function (item) {
     item.addEventListener("click", function () {
-      if (selectValue) selectValue.innerText = item.innerText;
-      elementToggleFunc(select);
-      filterFunc(item.innerText.toLowerCase());
+      if (selectValue) {
+        selectValue.innerText = item.innerText;
+        elementToggleFunc(select);
+        filterFunc(item.innerText.toLowerCase());
+      }
     });
   });
-
   // filter variables
   const filterItems = document.querySelectorAll("[data-filter-item]");
   function filterFunc(selectedValue) {
@@ -155,6 +167,98 @@ document.addEventListener('DOMContentLoaded', function () {
         formBtn.innerText = "Send";
         formBtn.removeAttribute("disabled");
         alert("Failed to send message. Please try again later.");
+      }
+    });
+  }
+
+  // New contact form handling
+  const contactForm = document.getElementById('contactForm');
+  const sendButton = document.querySelector('.send-button');
+  const formMessage = document.getElementById('formMessage');
+
+  if (contactForm && sendButton) {
+    // Enable/disable send button based on form validity
+    const formFields = contactForm.querySelectorAll('input, textarea');
+    formFields.forEach(function (field) {
+      field.addEventListener('input', function () {
+        const allValid = Array.from(formFields).every(f => f.checkValidity());
+        if (allValid) {
+          sendButton.removeAttribute('disabled');
+        } else {
+          sendButton.setAttribute('disabled', '');
+        }
+      });
+    });
+
+    // Form submission
+    contactForm.addEventListener('submit', async function (e) {
+      e.preventDefault();
+
+      // Disable button and show loading
+      sendButton.setAttribute('disabled', '');
+      sendButton.innerHTML = '<span>⏳</span> Sending...';
+
+      // Hide any previous messages
+      if (formMessage) {
+        formMessage.style.display = 'none';
+        formMessage.classList.remove('success', 'error');
+      }
+
+      // Collect form data
+      const formData = new FormData(contactForm);
+      const data = {};
+      formData.forEach((value, key) => {
+        data[key] = value;
+      });
+
+      try {
+        const response = await fetch('https://backend-of-my-portofolio-3.onrender.com/', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify(data)
+        });
+
+        if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`);
+        }
+
+        const result = await response.json();
+
+        // Success
+        sendButton.innerHTML = '<span>✅</span> Sent!';
+        contactForm.reset();
+
+        if (formMessage) {
+          formMessage.textContent = 'Message sent successfully! I\'ll get back to you soon.';
+          formMessage.classList.add('success');
+          formMessage.style.display = 'block';
+        }
+
+        // Reset button after 3 seconds
+        setTimeout(() => {
+          sendButton.innerHTML = '<span>✈</span> Send Message';
+          sendButton.removeAttribute('disabled');
+        }, 3000);
+
+      } catch (error) {
+        console.error('Form submission error:', error);
+
+        // Error
+        sendButton.innerHTML = '<span>❌</span> Failed';
+
+        if (formMessage) {
+          formMessage.textContent = 'Failed to send message. Please try again later.';
+          formMessage.classList.add('error');
+          formMessage.style.display = 'block';
+        }
+
+        // Reset button after 3 seconds
+        setTimeout(() => {
+          sendButton.innerHTML = '<span>✈</span> Send Message';
+          sendButton.removeAttribute('disabled');
+        }, 3000);
       }
     });
   }
