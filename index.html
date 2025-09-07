@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+project<!DOCTYPE html>
 <html lang="en">
 
 <!--
@@ -140,25 +140,24 @@
       <nav class="navbar" style="display: flex; justify-content: flex-end;">
         <ul class="navbar-list" style="display: flex; gap: 1.5em;">
           <li class="navbar-item">
-            <button class="navbar-link active" data-nav-link="about">about</button>
+            <button class="navbar-link active" data-nav-link="about">About</button>
           </li>
           <li class="navbar-item">
-            <button class="navbar-link" data-nav-link="resume">resume</button>
+            <button class="navbar-link" data-nav-link="resume">Resume</button>
           </li>
           <li class="navbar-item">
-            <button class="navbar-link" data-nav-link="portfolio">portfolio</button>
+            <button class="navbar-link" data-nav-link="portfolio">Projects</button>
           </li>
           <li class="navbar-item">
-            <button class="navbar-link" data-nav-link="blog">blog</button>
+            <button class="navbar-link" data-nav-link="contact">Contact</button>
           </li>
           <li class="navbar-item">
-            <button class="navbar-link" data-nav-link="education">education</button>
+            <button class="navbar-link" data-nav-link="education">Education</button>
           </li>
-
           <li class="navbar-item">
             <button class="navbar-link" data-nav-link="activities">Additional Activities</button>
           </li>
-
+        </ul>
         </ul>
       </nav>
 
@@ -171,7 +170,7 @@
         - #ADDITIONAL ACTIVITIES
       -->
 
-      <article class="activities" data-page="activities">
+  <article class="activities" data-page="activities">
         <header>
           <h2 class="h2 article-title">Additional Activities</h2>
         </header>
@@ -184,10 +183,6 @@
             <figure>
               <img src="./assets/images/certifications.jpg" alt="Certifications" style="max-width: 200px; border-radius: 10px;">
               <figcaption>Certifications</figcaption>
-            </figure>
-            <figure>
-              <img src="./assets/images/image1.jpg" alt="Activity 1" style="max-width: 200px; border-radius: 10px;">
-              <figcaption>Activity 1</figcaption>
             </figure>
             <figure>
               <img src="./assets/images/image2.jpg" alt="Activity 2" style="max-width: 200px; border-radius: 10px;">
@@ -210,14 +205,6 @@
               <figcaption>Logo</figcaption>
             </figure>
             <figure>
-              <img src="./assets/images/logogithub.png" alt="GitHub Logo" style="max-width: 100px; border-radius: 10px;">
-              <figcaption>GitHub Logo</figcaption>
-            </figure>
-            <figure>
-              <img src="./assets/images/logolinkedin.png" alt="LinkedIn Logo" style="max-width: 100px; border-radius: 10px;">
-              <figcaption>LinkedIn Logo</figcaption>
-            </figure>
-            <figure>
               <img src="./assets/images/use.jpg" alt="Use" style="max-width: 200px; border-radius: 10px;">
               <figcaption>Use</figcaption>
             </figure>
@@ -229,7 +216,7 @@
         - #ABOUT
       -->
 
-  <article class="about  active" data-page="about">
+  <article class="about active" data-page="about">
 
         <header>
           <h2 class="h2 article-title">About me</h2>
@@ -337,42 +324,53 @@
 
           <div class="testimonials-list has-scrollbar">
 
-            <div class="testimonials-item">
-              <div class="content-card" style="padding: 20px;">
-          <h4 class="h4 testimonials-item-title" style="margin-bottom: 10px;">Key Achievements</h4>
-          <ul style="list-style-type: disc; padding-left: 20px;">
-            <li><b>Google AI-ML Certification, AWS Cloud, Generative AI (Eduskill)</b></li>
-            <li><b>Salesforce Trailblazer Champion</b> (27 Badges, 6600 Points)</li>
-            <li><b>Merit-based B.Tech scholarship</b></li>
-            <li>Actively participated in <b>Hackathons and coding competitions</b></li>
-          </ul>
+            <div class="testimonials-item" data-testimonials-item>
+              <div class="content-card">
+                <h4 class="h4 testimonials-item-title" data-testimonials-title style="margin-bottom: 10px;">Key Achievements</h4>
+                <ul style="list-style-type: disc; padding-left: 20px;">
+                  <li><b>Google AI-ML Certification, AWS Cloud, Generative AI (Eduskill)</b></li>
+                  <li><b>Salesforce Trailblazer Champion</b> (27 Badges, 6600 Points)</li>
+                  <li><b>Merit-based B.Tech scholarship</b></li>
+                  <li>Actively participated in <b>Hackathons and coding competitions</b></li>
+                </ul>
               </div>
             </div>
 
-            <div class="testimonials-item">
-              <div class="content-card" style="padding: 20px;">
-          <h4 class="h4 testimonials-item-title" style="margin-bottom: 10px;">Internship Impact</h4>
-          <ul style="list-style-type: disc; padding-left: 20px;">
-            <li>Improved reporting speed by <b>40%</b> through SQL query optimization.</li>
-            <li>Built Tableau dashboards for analyzing <b>500+ student records</b>.</li>
-          </ul>
+            <div class="testimonials-item" data-testimonials-item>
+              <div class="content-card">
+                <h4 class="h4 testimonials-item-title" data-testimonials-title style="margin-bottom: 10px;">Internship Impact</h4>
+                <ul style="list-style-type: disc; padding-left: 20px;">
+                  <li>Improved reporting speed by <b>40%</b> through SQL query optimization.</li>
+                  <li>Built Tableau dashboards for analyzing <b>500+ student records</b>.</li>
+                </ul>
               </div>
             </div>
 
-            <div class="testimonials-item">
-              <div class="content-card" style="padding: 20px;">
-          <h4 class="h4 testimonials-item-title" style="margin-bottom: 10px;">Project Highlights</h4>
-          <ul style="list-style-type: disc; padding-left: 20px;">
-            <li>Developed a <b>Student Performance Dashboard</b> with React, Tableau, and SQL.</li>
-            <li>Created an <b>Online Bookstore</b> with React, Java, MySQL, and REST APIs.</li>
-            <li>Designed a responsive <b>Portfolio Website</b> with React, HTML, CSS, and JavaScript.</li>
-          </ul>
+            <div class="testimonials-item" data-testimonials-item>
+              <div class="content-card">
+                <h4 class="h4 testimonials-item-title" data-testimonials-title style="margin-bottom: 10px;">Project Highlights</h4>
+                <ul style="list-style-type: disc; padding-left: 20px;">
+                  <li>Developed a <b>Student Performance Dashboard</b> with React, Tableau, and SQL.</li>
+                  <li>Created an <b>Online Bookstore</b> with React, Java, MySQL, and REST APIs.</li>
+                  <li>Designed a responsive <b>Portfolio Website</b> with React, HTML, CSS, and JavaScript.</li>
+                </ul>
               </div>
             </div>
 
           </div>
 
         </section>
+
+        <div class="modal-container" data-modal-container>
+          <div class="modal">
+            <button class="modal-close-btn" data-modal-close-btn>&times;</button>
+            <img src="" alt="" class="modal-img" data-modal-img>
+            <h3 class="modal-title" data-modal-title></h3>
+            <p class="modal-text" data-modal-text></p>
+          </div>
+        </div>
+
+        <div class="overlay" data-overlay></div>
 
 
         </article>
@@ -541,198 +539,9 @@
               </a>
             </li>
           </ul>
-        </section>
-      </article>
-
-
-
-      <!--
-        - #BLOG
-      -->
-
-  <article class="blog" data-page="blog">
-
-        <header>
-          <h2 class="h2 article-title">Projects and Activities</h2>
-        </header>
-
-        <section class="blog-posts">
-
-          <ul class="blog-posts-list">
-
-        <li class="blog-post-item">
-          <a href="#">
-
-        <figure class="blog-banner-box">
-          <img src="./assets/images/project1.jpg" alt="Student Performance Dashboard" loading="lazy">
-        </figure>
-
-        <div class="blog-content">
-
-          <div class="blog-meta">
-        <p class="blog-category">React, Tableau, SQL</p>
-
-        <span class="dot"></span>
-
-        <time datetime="2023-12-15">Dec 15, 2023</time>
-          </div>
-
-          <h3 class="h3 blog-item-title">Student Performance Dashboard</h3>
-
-          <p class="blog-text">
-        Developed an interactive dashboard to analyze student performance using React, Tableau, and SQL.
-          </p>
-
-        </div>
-
-          </a>
-        </li>
-
-        <li class="blog-post-item">
-          <a href="#">
-
-        <figure class="blog-banner-box">
-          <img src="./assets/images/project2.jpg" alt="Online Bookstore" loading="lazy">
-        </figure>
-
-        <div class="blog-content">
-
-          <div class="blog-meta">
-        <p class="blog-category">React, Java, MySQL</p>
-
-        <span class="dot"></span>
-
-        <time datetime="2023-11-20">Nov 20, 2023</time>
-          </div>
-
-          <h3 class="h3 blog-item-title">Online Bookstore</h3>
-
-          <p class="blog-text">
-        Built a full-stack e-commerce application with user authentication and CRUD operations using React, Java, and MySQL.
-          </p>
-
-        </div>
-
-          </a>
-        </li>
-
-        <li class="blog-post-item">
-          <a href="#">
-
-        <figure class="blog-banner-box">
-          <img src="./assets/images/project3.jpg" alt="Portfolio Website" loading="lazy">
-        </figure>
-
-        <div class="blog-content">
-
-          <div class="blog-meta">
-        <p class="blog-category">React, HTML, CSS</p>
-
-        <span class="dot"></span>
-
-        <time datetime="2023-10-01">Oct 1, 2023</time>
-          </div>
-
-          <h3 class="h3 blog-item-title">Portfolio Website</h3>
-
-          <p class="blog-text">
-        Designed and developed a modern, responsive portfolio website showcasing projects and achievements using React, HTML, and CSS.
-          </p>
-
-        </div>
-
-          </a>
-        </li>
-
-        <li class="blog-post-item">
-          <a href="#">
-
-        <figure class="blog-banner-box">
-          <img src="./assets/images/blog-4.jpg" alt="SmartBridge Internship" loading="lazy">
-        </figure>
-
-        <div class="blog-content">
-
-          <div class="blog-meta">
-        <p class="blog-category">Data Analytics</p>
-
-        <span class="dot"></span>
-
-        <time datetime="2025-08-31">Aug 31, 2025</time>
-          </div>
-
-          <h3 class="h3 blog-item-title">Data Analytics Internship at SmartBridge</h3>
-
-          <p class="blog-text">
-        Gained hands-on experience in data analytics, building Tableau dashboards, and optimizing SQL queries.
-          </p>
-
-        </div>
-
-          </a>
-        </li>
-
-        <li class="blog-post-item">
-          <a href="#">
-
-        <figure class="blog-banner-box">
-          <img src="./assets/images/blog-5.jpg" alt="Salesforce Trailblazer" loading="lazy">
-        </figure>
-
-        <div class="blog-content">
-
-          <div class="blog-meta">
-        <p class="blog-category">Salesforce</p>
-
-        <span class="dot"></span>
-
-        <time datetime="2024-02-29">Feb 29, 2024</time>
-          </div>
-
-          <h3 class="h3 blog-item-title">Salesforce Trailblazer Community</h3>
-
-          <p class="blog-text">
-        Actively participating in the Salesforce learning ecosystem and achieving Trailblazer Champion status.
-          </p>
-
-        </div>
-
-          </a>
-        </li>
-
-        <li class="blog-post-item">
-          <a href="#">
-
-        <figure class="blog-banner-box">
-          <img src="./assets/images/blog-6.jpg" alt="Hackathons" loading="lazy">
-        </figure>
-
-        <div class="blog-content">
-
-          <div class="blog-meta">
-        <p class="blog-category">Coding Competitions</p>
-
-        <span class="dot"></span>
-
-        <time datetime="2024-03-15">Mar 15, 2024</time>
-          </div>
-
-          <h3 class="h3 blog-item-title">Participating in Hackathons and Coding Competitions</h3>
-
-          <p class="blog-text">
-        Sharpening skills and collaborating with peers in hackathons and coding competitions.
-          </p>
-
-        </div>
-
-          </a>
-        </li>
-
-          </ul>
-
-        </section>
-
-      </article>
+        </        g        git add .
+        git commit -m "Replace old portfolio with new cleaned version"
+        git push origin main
 
 
 
@@ -758,13 +567,13 @@
   </section>
   <section class="contact-form">
     <h3 class="h3 form-title">Contact Form</h3>
-    <form id="contactForm" class="form">
+    <form id="contactForm" class="form" data-form>
       <div class="input-wrapper">
-        <input type="text" name="fullname" id="fullname" class="form-input" placeholder="Full name" required>
-        <input type="email" name="email" id="email" class="form-input" placeholder="Email address" required>
+        <input type="text" name="fullname" id="fullname" class="form-input" data-form-input placeholder="Full name" required>
+        <input type="email" name="email" id="email" class="form-input" data-form-input placeholder="Email address" required>
       </div>
-      <textarea name="message" id="message" class="form-input" placeholder="Your Message" required></textarea>
-      <button class="form-btn" type="submit">
+      <textarea name="message" id="message" class="form-input" data-form-input placeholder="Your Message" required></textarea>
+      <button class="form-btn" data-form-btn type="submit">
         <ion-icon name="paper-plane"></ion-icon>
         <span>Send Message</span>
       </button>
