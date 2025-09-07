@@ -179,37 +179,46 @@ project<!DOCTYPE html>
         <section class="activities-gallery">
           <div class="activities-gallery">
             <figure>
-              <img src="./assets/images/Achievements.jpg" alt="Achievements">
+              <img src="./assets/images/Achievements.jpg" alt="Achievements" class="activity-img" data-activity-img>
               <figcaption>Achievements</figcaption>
             </figure>
             <figure>
-              <img src="./assets/images/certifications.jpg" alt="Certifications">
+              <img src="./assets/images/certifications.jpg" alt="Certifications" class="activity-img" data-activity-img>
               <figcaption>Certifications</figcaption>
             </figure>
             <figure>
-              <img src="./assets/images/image2.jpg" alt="Activity 2">
+              <img src="./assets/images/image2.jpg" alt="Activity 2" class="activity-img" data-activity-img>
               <figcaption>Activity 2</figcaption>
             </figure>
             <figure>
-              <img src="./assets/images/impact.jpg" alt="Impact">
+              <img src="./assets/images/impact.jpg" alt="Impact" class="activity-img" data-activity-img>
               <figcaption>Impact</figcaption>
             </figure>
             <figure>
-              <img src="./assets/images/internship.jpg" alt="Internship">
+              <img src="./assets/images/internship.jpg" alt="Internship" class="activity-img" data-activity-img>
               <figcaption>Internship</figcaption>
             </figure>
             <figure>
-              <img src="./assets/images/lanuages.jpg" alt="Languages">
+              <img src="./assets/images/lanuages.jpg" alt="Languages" class="activity-img" data-activity-img>
               <figcaption>Languages</figcaption>
             </figure>
             <figure>
-              <img src="./assets/images/logo.ico" alt="Logo" style="max-width: 120px; height: 120px;">
+              <img src="./assets/images/logo.ico" alt="Logo" style="max-width: 120px; height: 120px;" class="activity-img" data-activity-img>
               <figcaption>Logo</figcaption>
             </figure>
             <figure>
-              <img src="./assets/images/use.jpg" alt="Use">
+              <img src="./assets/images/use.jpg" alt="Use" class="activity-img" data-activity-img>
               <figcaption>Use</figcaption>
             </figure>
+          </div>
+          <!-- Modal for full image view -->
+          <div id="activityModal" class="modal-container" style="z-index:100;">
+            <div class="testimonials-modal" style="max-width:600px; margin:auto;">
+              <button class="modal-close-btn" id="activityModalClose" style="position:absolute;top:10px;right:10px;">&times;</button>
+              <img id="activityModalImg" src="" alt="Full Activity" style="width:100%;height:auto;border-radius:12px;box-shadow:0 8px 32px #000;">
+              <h3 id="activityModalCaption" style="color:#fff;margin-top:12px;"></h3>
+            </div>
+            <div class="overlay" id="activityModalOverlay" style="z-index:-1;"></div>
           </div>
         </section>
       </article>

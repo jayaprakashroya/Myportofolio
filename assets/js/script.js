@@ -1,6 +1,36 @@
 document.addEventListener('DOMContentLoaded', function () {
   'use strict';
 
+    // Additional Activities Full Image Modal
+    const activityImgs = document.querySelectorAll('[data-activity-img]');
+    const activityModal = document.getElementById('activityModal');
+    const activityModalImg = document.getElementById('activityModalImg');
+    const activityModalCaption = document.getElementById('activityModalCaption');
+    const activityModalClose = document.getElementById('activityModalClose');
+    const activityModalOverlay = document.getElementById('activityModalOverlay');
+
+    function openActivityModal(img, caption) {
+      if (activityModal && activityModalImg && activityModalCaption) {
+        activityModalImg.src = img.src;
+        activityModalImg.alt = img.alt;
+        activityModalCaption.textContent = caption;
+        activityModal.style.display = 'flex';
+      }
+      if (activityModalOverlay) activityModalOverlay.classList.add('active');
+    }
+    function closeActivityModal() {
+      if (activityModal) activityModal.style.display = 'none';
+      if (activityModalOverlay) activityModalOverlay.classList.remove('active');
+    }
+    activityImgs.forEach(function(img) {
+      img.addEventListener('click', function() {
+        const caption = img.parentElement.querySelector('figcaption')?.textContent || '';
+        openActivityModal(img, caption);
+      });
+    });
+    if (activityModalClose) activityModalClose.addEventListener('click', closeActivityModal);
+    if (activityModalOverlay) activityModalOverlay.addEventListener('click', closeActivityModal);
+
   // element toggle function
   const elementToggleFunc = function (elem) { elem.classList.toggle("active"); }
 
