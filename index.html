@@ -1,102 +1,91 @@
-project<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
-<!--
-  <p>
-    Hi, I'm Jaya Prakash Maneri<br>
-    B.Tech Computer Science Student | Full-Stack Developer | Data Analytics Enthusiast
-  </p>
-  <p>
-    I am passionate about building scalable web applications and leveraging data for impactful insights. Currently pursuing B.Tech in Computer Science at Sanskrithi School of Engineering (CGPA: 7.7/10). I have hands-on experience in full-stack development, API integration, and data analytics, and completed a Data Analytics internship at SmartBridge.
-    <br><br>
-    <b>Key Skills:</b> React.js, TypeScript, JavaScript, Java, Python, SQL, Tableau, AWS, Git, Agile/Scrum.<br>
-    <b>Certifications:</b> Google AI-ML, AWS Cloud, Generative AI (Eduskill), Salesforce Trailblazer Champion.<br>
-    <b>Languages:</b> Telugu (Native), English (Intermediate), Hindi (Beginner).
-  </p>
--->
-
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jaya Prakash Maneri - Portfolio</title>
   <link rel="stylesheet" href="./assets/css/style.css">
   <link rel="icon" href="./assets/images/logo.ico" type="image/x-icon">
-
-  <!--
-    - google font link
-  -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <!-- Small internal styles for layout fixes that won't change your external css paths -->
+  <style>
+    /* Keep minimal so your external style.css still controls design */
+    html,body{height:100%;margin:0;font-family:Poppins,system-ui,-apple-system,Segoe UI,Roboto,'Helvetica Neue',Arial}
+    .layout-container{display:flex;align-items:flex-start;gap:24px;padding:20px;max-width:1200px;margin:0 auto}
+    .sidebar{width:260px;flex:0 0 260px}
+    .main-content{flex:1;min-width:0}
+    @media (max-width:900px){
+      .layout-container{flex-direction:column;padding:12px}
+      .sidebar{width:100%;order:1}
+      .main-content{order:2}
+      nav.navbar{justify-content:center}
+    }
+    /* Simple utility for hidden */
+    .is-hidden{display:none!important}
+    /* Modal overlay tweaks */
+    .modal-container{position:fixed;inset:0;display:flex;align-items:center;justify-content:center;padding:20px;z-index:2000}
+    .modal-backdrop{position:fixed;inset:0;background:rgba(0,0,0,0.6)}
+    .modal-card{position:relative;max-width:900px;width:100%;z-index:2001}
+    .modal-card img{width:100%;height:auto;border-radius:12px}
+    .modal-close-btn{position:absolute;top:-10px;right:-10px;background:#fff;border-radius:50%;width:36px;height:36px;border:0;cursor:pointer;box-shadow:0 6px 20px rgba(0,0,0,0.2)}
+  </style>
 </head>
 
-<!--
-  <p>
-    Hi, I'm Jaya Prakash Maneri<br>
-    B.Tech Computer Science Student | Full-Stack Developer | Data Analytics Enthusiast
-  </p>
-  <p>
-    I am passionate about building scalable web applications and leveraging data for impactful insights. Currently pursuing B.Tech in Computer Science at Sanskrithi School of Engineering (CGPA: 7.7/10). I have hands-on experience in full-stack development, API integration, and data analytics, and completed a Data Analytics internship at SmartBridge.
-    <br><br>
-    <b>Key Skills:</b> React.js, TypeScript, JavaScript, Java, Python, SQL, Tableau, AWS, Git, Agile/Scrum.<br>
-    <b>Certifications:</b> Google AI-ML, AWS Cloud, Generative AI (Eduskill), Salesforce Trailblazer Champion.<br>
-    <b>Languages:</b> Telugu (Native), English (Intermediate), Hindi (Beginner).
-  </p>
--->
-  <div class="layout-container" style="display: flex; align-items: flex-start;">
-  <aside class="sidebar" data-sidebar>
+<body>
+
+  <div class="layout-container">
+
+    <aside class="sidebar" data-sidebar>
       <div class="sidebar-info">
         <figure class="avatar-box">
           <img src="./assets/images/avatar.jpg" alt="Jaya Prakash Maneri" width="80">
         </figure>
         <div class="info-content">
           <h1 class="name" title="Jaya Prakash Maneri">Jaya Prakash Maneri</h1>
-          <p class="title">B.Tech Computer Science Student </p>
+          <p class="title">B.Tech Computer Science Student</p>
         </div>
         <button class="info_more-btn" data-sidebar-btn>
           <span>Show Contacts</span>
           <ion-icon name="chevron-down"></ion-icon>
         </button>
       </div>
-      <div class="sidebar-info_more">
+
+      <div class="sidebar-info_more is-hidden" data-sidebar-more>
         <div class="separator"></div>
         <ul class="contacts-list">
           <li class="contact-item">
-            <div class="icon-box">
-              <ion-icon name="mail-outline"></ion-icon>
-            </div>
+            <div class="icon-box"><ion-icon name="mail-outline"></ion-icon></div>
             <div class="contact-info">
               <p class="contact-title">Email</p>
               <a href="mailto:manerijayaprakash@gmail.com" class="contact-link">manerijayaprakash@gmail.com</a>
             </div>
           </li>
           <li class="contact-item">
-            <div class="icon-box">
-              <ion-icon name="phone-portrait-outline"></ion-icon>
-            </div>
+            <div class="icon-box"><ion-icon name="phone-portrait-outline"></ion-icon></div>
             <div class="contact-info">
               <p class="contact-title">Phone</p>
               <a href="tel:+919014792534" class="contact-link">+91 90147 92534</a>
             </div>
           </li>
           <li class="contact-item">
-            <div class="icon-box">
-              <ion-icon name="calendar-outline"></ion-icon>
-            </div>
+            <div class="icon-box"><ion-icon name="calendar-outline"></ion-icon></div>
             <div class="contact-info">
               <p class="contact-title">Birthday</p>
               <time datetime="2005-07-14">14 July, 2005</time>
             </div>
           </li>
           <li class="contact-item">
-            <div class="icon-box">
-              <ion-icon name="location-outline"></ion-icon>
-            </div>
+            <div class="icon-box"><ion-icon name="location-outline"></ion-icon></div>
             <div class="contact-info">
               <p class="contact-title">Location</p>
               <address>Puttaparthi, India</address>
             </div>
           </li>
           <li class="contact-item">
-            <div class="icon-box">
-              <ion-icon name="document-outline"></ion-icon>
-            </div>
+            <div class="icon-box"><ion-icon name="document-outline"></ion-icon></div>
             <div class="contact-info">
               <p class="contact-title">Resume</p>
               <a href="./assets/resume.pdf" class="contact-link" download>Download Resume</a>
@@ -105,645 +94,339 @@ project<!DOCTYPE html>
         </ul>
         <div class="separator"></div>
         <ul class="social-list">
-          <li class="social-item">
-            <a href="https://www.linkedin.com/in/maneri-jaya-prakash" class="social-link" target="_blank">
-              <ion-icon name="logo-linkedin"></ion-icon>
-            </a>
-          </li>
-          <li class="social-item">
-            <a href="https://github.com/jayaprakashmaneri" class="social-link" target="_blank">
-              <ion-icon name="logo-github"></ion-icon>
-            </a>
-          </li>
-          <li class="social-item">
-            <a href="#" class="social-link">
-              <ion-icon name="logo-instagram"></ion-icon>
-            </a>
-          </li>
+          <li class="social-item"><a href="https://www.linkedin.com/in/maneri-jaya-prakash" class="social-link" target="_blank"><ion-icon name="logo-linkedin"></ion-icon></a></li>
+          <li class="social-item"><a href="https://github.com/jayaprakashmaneri" class="social-link" target="_blank"><ion-icon name="logo-github"></ion-icon></a></li>
+          <li class="social-item"><a href="#" class="social-link"><ion-icon name="logo-instagram"></ion-icon></a></li>
         </ul>
       </div>
 
-  </aside>
+    </aside>
 
+    <div class="main-content">
 
-
-
-
-    <!--
-      - #main-content
-    -->
-
-  <div class="main-content">
-
-      <!--
-        - #NAVBAR
-      -->
-
-      <nav class="navbar" style="display: flex; justify-content: flex-end;">
-        <ul class="navbar-list" style="display: flex; gap: 1.5em;">
-          <li class="navbar-item">
-            <button class="navbar-link active" data-nav-link="about">About</button>
-          </li>
-          <li class="navbar-item">
-            <button class="navbar-link" data-nav-link="resume">Resume</button>
-          </li>
-          <li class="navbar-item">
-            <button class="navbar-link" data-nav-link="portfolio">Projects</button>
-          </li>
-          <li class="navbar-item">
-            <button class="navbar-link" data-nav-link="contact">Contact</button>
-          </li>
-          <li class="navbar-item">
-            <button class="navbar-link" data-nav-link="education">Education</button>
-          </li>
-          <li class="navbar-item">
-            <button class="navbar-link" data-nav-link="activities">Additional Activities</button>
-          </li>
+      <nav class="navbar" style="display:flex;justify-content:flex-end;align-items:center;gap:12px;margin-bottom:18px;">
+        <ul class="navbar-list" style="display:flex;gap:1.2em;align-items:center;list-style:none;margin:0;padding:0;">
+          <li class="navbar-item"><button class="navbar-link active" data-nav-link="about">About</button></li>
+          <li class="navbar-item"><button class="navbar-link" data-nav-link="resume">Resume</button></li>
+          <li class="navbar-item"><button class="navbar-link" data-nav-link="portfolio">Projects</button></li>
+          <li class="navbar-item"><button class="navbar-link" data-nav-link="contact">Contact</button></li>
+          <li class="navbar-item"><button class="navbar-link" data-nav-link="education">Education</button></li>
+          <li class="navbar-item"><button class="navbar-link" data-nav-link="certifications">Certifications</button></li>
         </ul>
       </nav>
 
-
-
-
-
-
-      <!--
-        - #ADDITIONAL ACTIVITIES
-      -->
-
-  <article class="activities" data-page="activities">
-        <header>
-          <h2 class="h2 article-title">Additional Activities</h2>
-        </header>
-        <section class="activities-gallery">
-          <div class="activities-gallery">
-            <figure>
-              <img src="./assets/images/Achievements.jpg" alt="Achievements" class="activity-img" data-activity-img>
-              <figcaption>Achievements</figcaption>
-            </figure>
-            <figure>
-              <img src="./assets/images/certifications.jpg" alt="Certifications" class="activity-img" data-activity-img>
-              <figcaption>Certifications</figcaption>
-            </figure>
-            <figure>
-              <img src="./assets/images/image2.jpg" alt="Activity 2" class="activity-img" data-activity-img>
-              <figcaption>Activity 2</figcaption>
-            </figure>
-            <figure>
-              <img src="./assets/images/impact.jpg" alt="Impact" class="activity-img" data-activity-img>
-              <figcaption>Impact</figcaption>
-            </figure>
-            <figure>
-              <img src="./assets/images/internship.jpg" alt="Internship" class="activity-img" data-activity-img>
-              <figcaption>Internship</figcaption>
-            </figure>
-            <figure>
-              <img src="./assets/images/lanuages.jpg" alt="Languages" class="activity-img" data-activity-img>
-              <figcaption>Languages</figcaption>
-            </figure>
-            <figure>
-              <img src="./assets/images/use.jpg" alt="Use" class="activity-img" data-activity-img>
-              <figcaption>Use</figcaption>
-            </figure>
-          </div>
-          <!-- Modal for full image view -->
-          <div id="activityModal" class="modal-container" style="z-index:100;">
-            <div class="testimonials-modal" style="max-width:600px; margin:auto;">
-              <button class="modal-close-btn" id="activityModalClose" style="position:absolute;top:10px;right:10px;">&times;</button>
-              <img id="activityModalImg" src="" alt="Full Activity" style="width:100%;height:auto;border-radius:12px;box-shadow:0 8px 32px #000;">
-              <h3 id="activityModalCaption" style="color:#fff;margin-top:12px;"></h3>
-            </div>
-            <div class="overlay" id="activityModalOverlay" style="z-index:-1;"></div>
-          </div>
-        </section>
-      </article>
-
-      <!--
-        - #ABOUT
-      -->
-
-  <article class="about active" data-page="about">
-
-        <header>
-          <h2 class="h2 article-title">About me</h2>
-        </header>
-        <section class="about-text">
-          <p>
-            I am a B.Tech Computer Science student (Graduating 2026, CGPA: 7.7/10) with skills in frontend development (React.js, JavaScript/TypeScript, HTML/CSS) and backend (Java, SQL, Python). Completed a Data Analytics internship building dashboards and improving reporting efficiency.
-          </p>
-          <p>
-            Experienced in full-stack applications, API integration, and responsive UIs. Certified in Google AI-ML, AWS Cloud, and Generative AI. Comfortable using AI-assisted coding tools and eager to contribute to scalable, user-focused products.
-          </p>
-        </section>
-        <!--
-          - service
-        -->
-        <section class="service">
-
-          <h3 class="h3 service-title">What I'm doing</h3>
-
-          <ul class="service-list">
-
-            <li class="service-item">
-
-              <div class="service-icon-box">
-          <img src="./assets/images/icon-dev.svg" alt="Full-Stack Development icon" width="40">
-              </div>
-
-              <div class="service-content-box">
-          <h4 class="h4 service-item-title">Full-Stack Development</h4>
-
-          <p class="service-item-text">
-            Building responsive web applications with React.js, JavaScript/TypeScript, HTML/CSS, Java, Python, and
-            SQL.
-          </p>
-
-              </div>
-
-            </li>
-
-            <li class="service-item">
-
-              <div class="service-icon-box">
-          <img src="./assets/images/icon-design.svg" alt="Data Analytics icon" width="40">
-              </div>
-
-              <div class="service-content-box">
-          <h4 class="h4 service-item-title">Data Analytics</h4>
-
-          <p class="service-item-text">
-            Analyzing data and creating insightful visualizations using Tableau and SQL to drive business
-            decisions.
-          </p>
-
-              </div>
-
-            </li>
-
-            <li class="service-item">
-
-              <div class="service-icon-box">
-          <img src="./assets/images/icon-quote.svg" alt="AI Enthusiast icon" width="40">
-              </div>
-
-              <div class="service-content-box">
-          <h4 class="h4 service-item-title">AI Enthusiast</h4>
-
-          <p class="service-item-text">
-            Exploring and implementing AI-assisted coding tools like Copilot, ChatGPT, Perplexity, and Gemini to
-            enhance development workflows.
-          </p>
-
-              </div>
-
-            </li>
-
-            <li class="service-item">
-
-              <div class="service-icon-box">
-          <img src="./assets/images/icon-design.svg" alt="Team Collaboration icon" width="40">
-              </div>
-
-              <div class="service-content-box">
-          <h4 class="h4 service-item-title">Team Collaboration</h4>
-
-          <p class="service-item-text">
-            Collaborating effectively in Agile/Scrum environments to deliver high-quality software solutions.
-          </p>
-
-              </div>
-
-            </li>
-
-          </ul>
-
-        </section>
-
-
-        <!--
-          - testimonials
-        -->
-
-        <section class="testimonials">
-
-          <h3 class="h3 testimonials-title">Achievements &amp; Impact</h3>
-
-          <div class="testimonials-list has-scrollbar">
-
-            <div class="testimonials-item" data-testimonials-item>
-              <div class="content-card">
-                <h4 class="h4 testimonials-item-title" data-testimonials-title style="margin-bottom: 10px;">Key Achievements</h4>
-                <ul style="list-style-type: disc; padding-left: 20px;">
-                  <li><b>Google AI-ML Certification, AWS Cloud, Generative AI (Eduskill)</b></li>
-                  <li><b>Salesforce Trailblazer Champion</b> (27 Badges, 6600 Points)</li>
-                  <li><b>Merit-based B.Tech scholarship</b></li>
-                  <li>Actively participated in <b>Hackathons and coding competitions</b></li>
-                </ul>
-              </div>
-            </div>
-
-            <div class="testimonials-item" data-testimonials-item>
-              <div class="content-card">
-                <h4 class="h4 testimonials-item-title" data-testimonials-title style="margin-bottom: 10px;">Internship Impact</h4>
-                <ul style="list-style-type: disc; padding-left: 20px;">
-                  <li>Improved reporting speed by <b>40%</b> through SQL query optimization.</li>
-                  <li>Built Tableau dashboards for analyzing <b>500+ student records</b>.</li>
-                </ul>
-              </div>
-            </div>
-
-            <div class="testimonials-item" data-testimonials-item>
-              <div class="content-card">
-                <h4 class="h4 testimonials-item-title" data-testimonials-title style="margin-bottom: 10px;">Project Highlights</h4>
-                <ul style="list-style-type: disc; padding-left: 20px;">
-                  <li>Developed a <b>Student Performance Dashboard</b> with React, Tableau, and SQL.</li>
-                  <li>Created an <b>Online Bookstore</b> with React, Java, MySQL, and REST APIs.</li>
-                  <li>Designed a responsive <b>Portfolio Website</b> with React, HTML, CSS, and JavaScript.</li>
-                </ul>
-              </div>
-            </div>
-
-          </div>
-
-        </section>
-
-        <div class="modal-container" data-modal-container>
-          <div class="modal">
-            <button class="modal-close-btn" data-modal-close-btn>&times;</button>
-            <img src="" alt="" class="modal-img" data-modal-img>
-            <h3 class="modal-title" data-modal-title></h3>
-            <p class="modal-text" data-modal-text></p>
-          </div>
-        </div>
-
-        <div class="overlay" data-overlay></div>
-
-
-        </article>
-
-
-      <!--
-        - #RESUME
-      -->
-
-  <article class="resume" data-page="resume">
-        <section class="service">
-          <h3 class="h3 service-title">What I'm doing</h3>
-          <ul class="service-list">
-            <li class="service-item">
-              <div class="service-icon-box">
-                <img src="./assets/images/icon-dev.svg" alt="Full-Stack Developer" width="40">
-              </div>
-              <div class="service-content-box">
-                <h4 class="h4 service-item-title">Full-Stack Development</h4>
-                <p class="service-item-text">
-                  Building responsive web applications with React.js, JavaScript/TypeScript, HTML/CSS, Java, Python, and SQL.
-                </p>
-              </div>
-            </li>
-            <li class="service-item">
-              <div class="service-icon-box">
-                <img src="./assets/images/icon-design.svg" alt="Data Analytics" width="40">
-              </div>
-              <div class="service-content-box">
-                <h4 class="h4 service-item-title">Data Analytics</h4>
-                <p class="service-item-text">
-                  Analyzing data and creating insightful visualizations using Tableau and SQL to drive business decisions.
-                </p>
-              </div>
-            </li>
-            <li class="service-item">
-              <div class="service-icon-box">
-                <img src="./assets/images/icon-quote.svg" alt="AI Enthusiast" width="40">
-              </div>
-              <div class="service-content-box">
-                <h4 class="h4 service-item-title">AI Enthusiast</h4>
-                <p class="service-item-text">
-                  Using AI-assisted coding tools (Copilot, ChatGPT, Perplexity, Gemini) to enhance development workflows.
-                </p>
-              </div>
-            </li>
-            <li class="service-item">
-              <div class="service-icon-box">
-                <img src="./assets/images/icon-design.svg" alt="Team Collaboration" width="40">
-              </div>
-              <div class="service-content-box">
-                <h4 class="h4 service-item-title">Team Collaboration</h4>
-                <p class="service-item-text">
-                  Agile/Scrum methodologies, effective team communication, and project delivery.
-                </p>
-              </div>
-            </li>
-          </ul>
-        </section>
-            <li class="timeline-item">
-              <h4 class="h4 timeline-item-title">Academic Projects, Sanskrithi School of Engineering</h4>
-              <span>2022 – Present</span>
-              <p class="timeline-text">
-                Led multiple full-stack development projects as part of computer science curriculum:<br>
-                - Developed Student Performance Dashboard with React and Tableau<br>
-                - Built Online Bookstore with Java backend and MySQL database<br>
-                - Created responsive Portfolio Website with modern design principles
-              </p>
-            </li>
-            <li class="timeline-item">
-              <h4 class="h4 timeline-item-title">Salesforce Ecosystem, Trailblazer Community</h4>
-              <span>2023 – Present</span>
-              <p class="timeline-text">
-                Active participant in Salesforce learning ecosystem with consistent progress:<br>
-                - Earned 27 Trailblazer badges demonstrating platform expertise<br>
-                - Accumulated 6600+ points through hands-on learning modules<br>
-                - Achieved Trailblazer Champion status through consistent engagement
-              </p>
-            </li>
-          </ol>
-        </section>
+      <!-- Certifications (replaces Activities) -->
+      <article class="certifications" data-page="certifications" style="display:none;">
+        <header><h2 class="h2 article-title">Certifications</h2></header>
         <section class="timeline">
-          <div class="title-wrapper">
-            <div class="icon-box"><ion-icon name="book-outline"></ion-icon></div>
-            <h3 class="h3">Professional Impact</h3>
-          </div>
           <ol class="timeline-list">
             <li class="timeline-item">
-              <h4 class="h4 timeline-item-title">Measurable contributions during internship and academic projects</h4>
-              <p class="timeline-text">
-                <b>40%</b> Query Performance Improvement<br>
-                <b>500+</b> Records Analyzed<br>
-                <b>27</b> Salesforce Badges Earned<br>
-                <b>3</b> Major Projects Completed
-              </p>
+              <h4 class="h4 timeline-item-title">Google AI-ML Certification</h4>
+              <span>2024</span>
+              <p class="timeline-text">Completed foundational and applied ML coursework, projects in supervised learning and model evaluation.</p>
+            </li>
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">AWS Cloud Foundations</h4>
+              <span>2024</span>
+              <p class="timeline-text">Fundamentals of cloud computing and core AWS services.</p>
+            </li>
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">Generative AI (Eduskill)</h4>
+              <span>2024</span>
+              <p class="timeline-text">Practical projects building prompt-based generative systems and evaluation.</p>
+            </li>
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">Salesforce Trailblazer Champion</h4>
+              <span>2023 – Present</span>
+              <p class="timeline-text">27 badges earned, active participation in platform learning and challenges.</p>
+            </li>
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">SQL for Data Analytics</h4>
+              <span>2023</span>
+              <p class="timeline-text">Verified skills in write efficient queries and optimizing SQL performance.</p>
             </li>
           </ol>
         </section>
       </article>
 
+      <!-- About -->
+      <article class="about active" data-page="about">
+        <header><h2 class="h2 article-title">About me</h2></header>
+        <section class="about-text">
+          <p>I am a B.Tech Computer Science student (Graduating 2026, CGPA: 7.7/10) with skills in frontend development (React.js, JavaScript/TypeScript, HTML/CSS) and backend (Java, SQL, Python). Completed a Data Analytics internship building dashboards and improving reporting efficiency.</p>
+          <p>Experienced in full-stack applications, API integration, and responsive UIs. Certified in Google AI-ML, AWS Cloud, and Generative AI. Comfortable using AI-assisted coding tools and eager to contribute to scalable, user-focused products.</p>
+        </section>
 
+        <section class="service">
+          <h3 class="h3 service-title">What I'm doing</h3>
+          <ul class="service-list">
+            <li class="service-item">
+              <div class="service-icon-box"><img src="./assets/images/icon-dev.svg" alt="Full-Stack Development icon" width="40"></div>
+              <div class="service-content-box"><h4 class="h4 service-item-title">Full-Stack Development</h4><p class="service-item-text">Building responsive web applications with React.js, JavaScript/TypeScript, HTML/CSS, Java, Python, and SQL.</p></div>
+            </li>
+            <li class="service-item">
+              <div class="service-icon-box"><img src="./assets/images/icon-design.svg" alt="Data Analytics icon" width="40"></div>
+              <div class="service-content-box"><h4 class="h4 service-item-title">Data Analytics</h4><p class="service-item-text">Analyzing data and creating insightful visualizations using Tableau and SQL to drive business decisions.</p></div>
+            </li>
+            <li class="service-item">
+              <div class="service-icon-box"><img src="./assets/images/icon-quote.svg" alt="AI Enthusiast icon" width="40"></div>
+              <div class="service-content-box"><h4 class="h4 service-item-title">AI Enthusiast</h4><p class="service-item-text">Exploring and implementing AI-assisted coding tools like Copilot, ChatGPT, Perplexity, and Gemini to enhance development workflows.</p></div>
+            </li>
+          </ul>
+        </section>
 
+        <section class="testimonials">
+          <h3 class="h3 testimonials-title">Achievements &amp; Impact</h3>
+          <div class="testimonials-list has-scrollbar">
+            <div class="testimonials-item"><div class="content-card"><h4 class="h4 testimonials-item-title">Key Achievements</h4><ul><li><b>Google AI-ML Certification, AWS Cloud, Generative AI (Eduskill)</b></li><li><b>Salesforce Trailblazer Champion</b> (27 Badges, 6600 Points)</li><li><b>Merit-based B.Tech scholarship</b></li><li>Participated in hackathons and coding competitions</li></ul></div></div>
+            <div class="testimonials-item"><div class="content-card"><h4 class="h4 testimonials-item-title">Internship Impact</h4><ul><li>Improved reporting speed by <b>40%</b> through SQL query optimization.</li><li>Built Tableau dashboards for analyzing <b>500+ student records</b>.</li></ul></div></div>
+            <div class="testimonials-item"><div class="content-card"><h4 class="h4 testimonials-item-title">Project Highlights</h4><ul><li>Student Performance Dashboard (React, Tableau, SQL)</li><li>Online Bookstore (React, Java, MySQL)</li><li>Responsive Portfolio Website (React, HTML, CSS)</li></ul></div></div>
+          </div>
+        </section>
+      </article>
 
+      <!-- Resume -->
+      <article class="resume" data-page="resume" style="display:none;">
+        <section class="service">
+          <h3 class="h3 service-title">What I'm doing</h3>
+          <ul class="service-list">
+            <li class="service-item"><div class="service-icon-box"><img src="./assets/images/icon-dev.svg" alt="Full-Stack Developer" width="40"></div><div class="service-content-box"><h4 class="h4 service-item-title">Full-Stack Development</h4><p class="service-item-text">Building responsive web applications with React.js, JavaScript/TypeScript, HTML/CSS, Java, Python, and SQL.</p></div></li>
+            <li class="service-item"><div class="service-icon-box"><img src="./assets/images/icon-design.svg" alt="Data Analytics" width="40"></div><div class="service-content-box"><h4 class="h4 service-item-title">Data Analytics</h4><p class="service-item-text">Analyzing data and creating insightful visualizations using Tableau and SQL to drive business decisions.</p></div></li>
+            <li class="service-item"><div class="service-icon-box"><img src="./assets/images/icon-quote.svg" alt="AI Enthusiast" width="40"></div><div class="service-content-box"><h4 class="h4 service-item-title">AI Enthusiast</h4><p class="service-item-text">Using AI-assisted coding tools to enhance development workflows.</p></div></li>
+          </ul>
+        </section>
 
-      <!--
-        - #PORTFOLIO
-      -->
+        <section class="timeline">
+          <div class="title-wrapper"><div class="icon-box"><ion-icon name="book-outline"></ion-icon></div><h3 class="h3">Academic Projects</h3></div>
+          <ol class="timeline-list">
+            <li class="timeline-item"><h4 class="h4 timeline-item-title">Academic Projects, Sanskrithi School of Engineering</h4><span>2022 – Present</span><p class="timeline-text">Led multiple full-stack projects: Student Performance Dashboard, Online Bookstore, Portfolio Website.</p></li>
+            <li class="timeline-item"><h4 class="h4 timeline-item-title">Salesforce Ecosystem, Trailblazer Community</h4><span>2023 – Present</span><p class="timeline-text">Earned 27 badges and active engagement in the Trailblazer community.</p></li>
+          </ol>
+        </section>
 
-  <article class="portfolio" data-page="portfolio">
-        <header>
-          <h2 class="h2 article-title">Featured Projects</h2>
-        </header>
+        <section class="timeline">
+          <div class="title-wrapper"><div class="icon-box"><ion-icon name="trophy-outline"></ion-icon></div><h3 class="h3">Professional Impact</h3></div>
+          <ol class="timeline-list">
+            <li class="timeline-item"><h4 class="h4 timeline-item-title">Measurable contributions</h4><p class="timeline-text"><b>40%</b> Query Performance Improvement<br><b>500+</b> Records Analyzed<br><b>27</b> Salesforce Badges Earned<br><b>3</b> Major Projects Completed</p></li>
+          </ol>
+        </section>
+      </article>
+
+      <!-- Portfolio -->
+      <article class="portfolio" data-page="portfolio" style="display:none;">
+        <header><h2 class="h2 article-title">Featured Projects</h2></header>
         <section class="projects">
           <ul class="project-list">
             <li class="project-item active">
-              <a href="#">
-                <figure class="project-img">
-                  <img src="./assets/images/project1.jpg" alt="Student Performance Dashboard" loading="lazy">
-                </figure>
+              <a href="#" class="project-link">
+                <figure class="project-img"><img src="./assets/images/project1.jpg" alt="Student Performance Dashboard" loading="lazy" class="clickable-img"></figure>
                 <h3 class="project-title">Student Performance Dashboard</h3>
                 <p class="project-category">Interactive dashboard for analyzing 500+ student records with advanced data visualizations and API integration.</p>
-                <ul>
-                  <li>Built dashboard for 500+ student records</li>
-                  <li>Advanced data visualizations</li>
-                  <li>SQL query optimization (40% faster reporting)</li>
-                  <li>Real-time API integration</li>
-                </ul>
+                <ul><li>Built dashboard for 500+ student records</li><li>Advanced visualizations</li><li>SQL query optimization (40% faster)</li><li>Real-time API integration</li></ul>
                 <b>Technologies Used:</b> React, Tableau, SQL, REST APIs<br>
                 <a href="#" class="btn">Live Demo</a> <a href="#" class="btn">Source Code</a>
               </a>
             </li>
             <li class="project-item active">
-              <a href="#">
-                <figure class="project-img">
-                  <img src="./assets/images/project2.jpg" alt="Online Bookstore" loading="lazy">
-                </figure>
+              <a href="#" class="project-link">
+                <figure class="project-img"><img src="./assets/images/project2.jpg" alt="Online Bookstore" loading="lazy" class="clickable-img"></figure>
                 <h3 class="project-title">Online Bookstore</h3>
-                <p class="project-category">Full-stack e-commerce application with user authentication, CRUD operations, and responsive design.</p>
-                <ul>
-                  <li>User authentication and authorization</li>
-                  <li>Complete CRUD operations</li>
-                  <li>Responsive UI design</li>
-                  <li>Database query optimization (25% faster)</li>
-                  <li>Shopping cart functionality</li>
-                </ul>
+                <p class="project-category">Full-stack e-commerce app with authentication and CRUD.</p>
+                <ul><li>User authentication</li><li>CRUD operations</li><li>Responsive UI</li><li>DB query optimization (25% faster)</li></ul>
                 <b>Technologies Used:</b> React, Java, MySQL, REST APIs<br>
                 <a href="#" class="btn">Live Demo</a> <a href="#" class="btn">Source Code</a>
               </a>
             </li>
             <li class="project-item active">
-              <a href="#">
-                <figure class="project-img">
-                  <img src="./assets/images/project3.jpg" alt="Portfolio Website" loading="lazy">
-                </figure>
+              <a href="#" class="project-link">
+                <figure class="project-img"><img src="./assets/images/project3.jpg" alt="Portfolio Website" loading="lazy" class="clickable-img"></figure>
                 <h3 class="project-title">Portfolio Website</h3>
-                <p class="project-category">Modern, responsive portfolio website showcasing projects and achievements with accessibility features.</p>
-                <ul>
-                  <li>Fully responsive design</li>
-                  <li>Dark/light mode toggle</li>
-                  <li>Accessibility features</li>
-                  <li>Modern UI/UX design</li>
-                  <li>Cross-browser compatibility</li>
-                </ul>
+                <p class="project-category">Modern, responsive portfolio website showcasing projects and achievements.</p>
+                <ul><li>Responsive design</li><li>Dark/light mode toggle</li><li>Accessibility features</li></ul>
                 <b>Technologies Used:</b> React, HTML, CSS, JavaScript<br>
                 <a href="#" class="btn">Live Demo</a> <a href="#" class="btn">Source Code</a>
               </a>
             </li>
           </ul>
+        </section>
+      </article>
 
-
-
-
-      <!--
-        - #CONTACT
-      -->
-
-      <article class="contact" data-page="contact">
-        <header>
-          <h2 class="h2 article-title">Get In Touch</h2>
-          <p style="text-align:center; margin-top:8px; color:#666; font-size:1.1em;">I'm always open to discussing new opportunities, collaborations, or just having a conversation about technology</p>
-        </header>
+      <!-- Contact -->
+      <article class="contact" data-page="contact" style="display:none;">
+        <header><h2 class="h2 article-title">Get In Touch</h2><p style="text-align:center;color:#666;margin-top:8px">I'm open to opportunities and collaborations.</p></header>
         <section class="contact-section">
           <div class="container">
-            <!-- Contact Content -->
             <div class="contact-content">
-              <!-- Let's Connect -->
               <div class="lets-connect">
                 <h2>Let's Connect</h2>
-
                 <div class="contact-info">
-                  <div class="contact-item">
-                    <div class="contact-icon email-icon">✉</div>
-                    <div class="contact-details">
-                      <h3>EMAIL</h3>
-                      <p>manerijayaprakash@gmail.com</p>
-                    </div>
-                  </div>
-
-                  <div class="contact-item">
-                    <div class="contact-icon phone-icon">📞</div>
-                    <div class="contact-details">
-                      <h3>PHONE</h3>
-                      <p>+91 90147 92534</p>
-                    </div>
-                  </div>
-
-                  <div class="contact-item">
-                    <div class="contact-icon location-icon">📍</div>
-                    <div class="contact-details">
-                      <h3>LOCATION</h3>
-                      <p>Puttaparthi, India</p>
-                    </div>
-                  </div>
-
-                  <div class="contact-item">
-                    <div class="contact-icon linkedin-icon">💼</div>
-                    <div class="contact-details">
-                      <h3>LINKEDIN</h3>
-                      <p>maneri-jaya-prakash</p>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="professional-profiles">
-                  <h3>Professional Profiles</h3>
+                  <div class="contact-item"><div class="contact-icon email-icon">✉</div><div class="contact-details"><h3>EMAIL</h3><p>manerijayaprakash@gmail.com</p></div></div>
+                  <div class="contact-item"><div class="contact-icon phone-icon">📞</div><div class="contact-details"><h3>PHONE</h3><p>+91 90147 92534</p></div></div>
+                  <div class="contact-item"><div class="contact-icon location-icon">📍</div><div class="contact-details"><h3>LOCATION</h3><p>Puttaparthi, India</p></div></div>
+                  <div class="contact-item"><div class="contact-icon linkedin-icon">💼</div><div class="contact-details"><h3>LINKEDIN</h3><p>maneri-jaya-prakash</p></div></div>
                 </div>
               </div>
 
-              <!-- Send Message Form -->
               <div class="send-message">
                 <h2>Send a Message</h2>
-
                 <form id="contactForm" class="message-form">
-                  <div class="form-row">
-                    <div class="form-field">
-                      <label>Your Name</label>
-                      <input type="text" name="name" placeholder="Enter your name" required>
-                    </div>
-                    <div class="form-field">
-                      <label>Email Address</label>
-                      <input type="email" name="email" placeholder="Enter your email" required>
-                    </div>
+                  <div class="form-row" style="display:flex;gap:12px;flex-wrap:wrap;">
+                    <div class="form-field" style="flex:1;"><label>Your Name</label><input type="text" name="name" placeholder="Enter your name" required></div>
+                    <div class="form-field" style="flex:1;"><label>Email Address</label><input type="email" name="email" placeholder="Enter your email" required></div>
                   </div>
-
-                  <div class="form-field">
-                    <label>Subject</label>
-                    <input type="text" name="subject" placeholder="What's this about?" required>
-                  </div>
-
-                  <div class="form-field">
-                    <label>Message</label>
-                    <textarea name="message" rows="5" placeholder="Tell me about your project, opportunity, or just say hello!" required></textarea>
-                  </div>
-
-                  <button type="submit" class="send-button">
-                    <span>✈</span> Send Message
-                  </button>
+                  <div class="form-field"><label>Subject</label><input type="text" name="subject" placeholder="What's this about?" required></div>
+                  <div class="form-field"><label>Message</label><textarea name="message" rows="5" placeholder="Tell me about your project..." required></textarea></div>
+                  <button type="submit" class="send-button"><span>✈</span> Send Message</button>
                 </form>
-
                 <div id="formMessage" class="form-message"></div>
               </div>
+
             </div>
           </div>
         </section>
       </article>
 
-      <!--
-        - #EDUCATION
-      -->
-
-      <article class="education" data-page="education">
-        <header>
-          <h2 class="h2 article-title">Education</h2>
-          <p style="text-align:center; margin-top:8px; color:#666; font-size:1.1em;">Strong academic foundation in computer science and mathematics</p>
-        </header>
-        <section class="education-cards" style="display:flex;flex-direction:column;gap:2em;max-width:900px;margin:auto;">
-          <div class="edu-card" style="background:#fff;border-radius:16px;box-shadow:0 4px 24px rgba(0,0,0,0.08);padding:2em 1.5em;display:flex;align-items:center;gap:2em;">
-            <div style="display:flex;flex-direction:column;align-items:center;justify-content:center;">
-              <div style="background:#4f46e5;color:#fff;border-radius:50%;width:48px;height:48px;display:flex;align-items:center;justify-content:center;font-size:2em;"><ion-icon name="school-outline"></ion-icon></div>
-            </div>
+      <!-- Education -->
+      <article class="education" data-page="education" style="display:none;">
+        <header><h2 class="h2 article-title">Education</h2><p style="text-align:center;color:#666;margin-top:8px">Strong academic foundation in computer science and mathematics</p></header>
+        <section class="education-cards">
+          <div class="edu-card">
             <div style="flex:1;">
-              <h3 style="margin-bottom:0.2em;">B.Tech in Computer Science</h3>
-              <a href="#" style="color:#4f46e5;font-weight:500;text-decoration:none;">Sanskrithi School of Engineering</a>
-              <div style="color:#888;font-size:0.95em;margin-bottom:0.5em;">Anantapur, India &bull; 2022 &ndash; 2026</div>
-              <div style="margin-bottom:0.5em;">Comprehensive computer science program covering software development, data structures, algorithms, and modern technologies.</div>
-              <div style="font-weight:600;">KEY SUBJECTS:</div>
-              <div style="display:flex;flex-wrap:wrap;gap:0.5em;margin-bottom:0.5em;">
-                <span class="edu-tag">Data Structures & Algorithms</span>
-                <span class="edu-tag">Object-Oriented Programming</span>
-                <span class="edu-tag">Database Management Systems</span>
-                <span class="edu-tag">Web Development</span>
-                <span class="edu-tag">Software Engineering</span>
-                <span class="edu-tag">Computer Networks</span>
-                <span class="edu-tag">Operating Systems</span>
-                <span class="edu-tag">Machine Learning Fundamentals</span>
-              </div>
+              <h3>B.Tech in Computer Science</h3>
+              <a href="#">Sanskrithi School of Engineering</a>
+              <div>Anantapur, India • 2022 – 2026</div>
+              <div>Comprehensive program covering software development, DS &amp; Algo, and modern technologies.</div>
             </div>
-            <div style="text-align:right;min-width:100px;">
-              <div style="font-size:1.5em;font-weight:700;color:#22c55e;">7.7/10</div>
-              <span style="background:#d1fae5;color:#22c55e;padding:0.3em 0.8em;border-radius:12px;font-size:0.95em;font-weight:600;">Currently Pursuing</span>
-            </div>
+            <div style="text-align:right;min-width:100px;"><div style="font-size:1.5em;font-weight:700;color:#22c55e;">7.7/10</div><span>Currently Pursuing</span></div>
           </div>
-          <div class="edu-card" style="background:#fff;border-radius:16px;box-shadow:0 4px 24px rgba(0,0,0,0.08);padding:2em 1.5em;display:flex;align-items:center;gap:2em;">
-            <div style="display:flex;flex-direction:column;align-items:center;justify-content:center;">
-              <div style="background:#4f46e5;color:#fff;border-radius:50%;width:48px;height:48px;display:flex;align-items:center;justify-content:center;font-size:2em;"><ion-icon name="school-outline"></ion-icon></div>
-            </div>
+          <div class="edu-card">
             <div style="flex:1;">
-              <h3 style="margin-bottom:0.2em;">Class XII (Senior Secondary)</h3>
-              <a href="#" style="color:#4f46e5;font-weight:500;text-decoration:none;">AP State Board</a>
-              <div style="color:#888;font-size:0.95em;margin-bottom:0.5em;">Andhra Pradesh, India &bull; 2022</div>
-              <div style="margin-bottom:0.5em;">Completed higher secondary education with focus on Mathematics, Physics, and Chemistry.</div>
-              <div style="font-weight:600;">KEY SUBJECTS:</div>
-              <div style="display:flex;flex-wrap:wrap;gap:0.5em;margin-bottom:0.5em;">
-                <span class="edu-tag">Mathematics</span>
-                <span class="edu-tag">Physics</span>
-                <span class="edu-tag">Chemistry</span>
-                <span class="edu-tag">English</span>
-              </div>
+              <h3>Class XII (Senior Secondary)</h3>
+              <a href="#">AP State Board</a>
+              <div>Andhra Pradesh, India • 2022</div>
+              <div>Completed higher secondary focused on Mathematics, Physics, and Chemistry.</div>
             </div>
-            <div style="text-align:right;min-width:100px;">
-              <div style="font-size:1.5em;font-weight:700;color:#2563eb;">84.9%</div>
-              <span style="background:#e0e7ff;color:#2563eb;padding:0.3em 0.8em;border-radius:12px;font-size:0.95em;font-weight:600;">Completed</span>
-            </div>
+            <div style="text-align:right;min-width:100px;"><div style="font-size:1.5em;font-weight:700;color:#2563eb;">84.9%</div><span>Completed</span></div>
           </div>
-          <div class="edu-card" style="background:#fff;border-radius:16px;box-shadow:0 4px 24px rgba(0,0,0,0.08);padding:2em 1.5em;display:flex;align-items:center;gap:2em;">
-            <div style="display:flex;flex-direction:column;align-items:center;justify-content:center;">
-              <div style="background:#4f46e5;color:#fff;border-radius:50%;width:48px;height:48px;display:flex;align-items:center;justify-content:center;font-size:2em;"><ion-icon name="school-outline"></ion-icon></div>
-            </div>
+          <div class="edu-card">
             <div style="flex:1;">
-              <h3 style="margin-bottom:0.2em;">Class X (Secondary)</h3>
-              <a href="#" style="color:#4f46e5;font-weight:500;text-decoration:none;">AP State Board</a>
-              <div style="color:#888;font-size:0.95em;margin-bottom:0.5em;">Andhra Pradesh, India &bull; 2020</div>
-              <div style="margin-bottom:0.5em;">Strong academic foundation with excellent performance across all subjects.</div>
-              <div style="font-weight:600;">KEY SUBJECTS:</div>
-              <div style="display:flex;flex-wrap:wrap;gap:0.5em;margin-bottom:0.5em;">
-                <span class="edu-tag">Mathematics</span>
-                <span class="edu-tag">Science</span>
-                <span class="edu-tag">Social Studies</span>
-                <span class="edu-tag">English</span>
-                <span class="edu-tag">Telugu</span>
-              </div>
+              <h3>Class X (Secondary)</h3>
+              <a href="#">AP State Board</a>
+              <div>Andhra Pradesh, India • 2020</div>
+              <div>Strong academic foundation with excellent performance across subjects.</div>
             </div>
-            <div style="text-align:right;min-width:100px;">
-              <div style="font-size:1.5em;font-weight:700;color:#22c55e;">94%</div>
-              <span style="background:#d1fae5;color:#22c55e;padding:0.3em 0.8em;border-radius:12px;font-size:0.95em;font-weight:600;">Completed</span>
-            </div>
+            <div style="text-align:right;min-width:100px;"><div style="font-size:1.5em;font-weight:700;color:#22c55e;">94%</div><span>Completed</span></div>
           </div>
         </section>
       </article>
-  </main>
 
+      <!-- Shared modal container used by projects and certifications images -->
+      <div id="globalModal" class="modal-container is-hidden" aria-hidden="true">
+        <div class="modal-backdrop"></div>
+        <div class="modal-card" role="dialog" aria-modal="true">
+          <button class="modal-close-btn" id="globalModalClose" aria-label="Close">&times;</button>
+          <img id="globalModalImg" src="" alt="Full view">
+          <h3 id="globalModalCaption" style="color:#fff;margin-top:12px;text-align:center"></h3>
+        </div>
+      </div>
 
+    </div>
+  </div>
 
-
-
-
-  <!--
-    - custom js link
-  -->
   <script src="./assets/js/script.js"></script>
-
-
-  <!--
-    - ionicon link
-  -->
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+  <script>
+    // Inline JS to ensure nav switching + modal behavior works even if original script.js needs tweaks.
+    (function(){
+      const navLinks = document.querySelectorAll('.navbar-link');
+      const pages = document.querySelectorAll('[data-page]');
+      const sidebarBtn = document.querySelector('[data-sidebar-btn]');
+      const sidebarMore = document.querySelector('[data-sidebar-more]');
+
+      function showPage(name){
+        pages.forEach(p=>{
+          if(p.dataset.page===name){ p.style.display='block'; p.classList.add('active') }
+          else { p.style.display='none'; p.classList.remove('active') }
+        });
+        navLinks.forEach(btn=> btn.classList.toggle('active', btn.dataset.navLink===name));
+        window.scrollTo({top:0,behavior:'smooth'});
+      }
+
+      navLinks.forEach(btn=>{
+        btn.addEventListener('click', ()=> showPage(btn.dataset.navLink));
+      });
+
+      // Sidebar show contacts toggle
+      if(sidebarBtn && sidebarMore){
+        sidebarBtn.addEventListener('click', ()=> sidebarMore.classList.toggle('is-hidden'));
+      }
+
+      // Modal logic for images (click and touch)
+      const modal = document.getElementById('globalModal');
+      const modalImg = document.getElementById('globalModalImg');
+      const modalCaption = document.getElementById('globalModalCaption');
+      const modalClose = document.getElementById('globalModalClose');
+
+      function openModal(src, alt){
+        modalImg.src = src;
+        modalImg.alt = alt || '';
+        modalCaption.textContent = alt || '';
+        modal.classList.remove('is-hidden');
+        modal.setAttribute('aria-hidden','false');
+      }
+      function closeModal(){
+        modal.classList.add('is-hidden');
+        modal.setAttribute('aria-hidden','true');
+        modalImg.src = '';
+        modalCaption.textContent = '';
+      }
+
+      modalClose.addEventListener('click', closeModal);
+      modal.querySelector('.modal-backdrop').addEventListener('click', closeModal);
+      document.addEventListener('keydown', (e)=>{ if(e.key==='Escape') closeModal(); });
+
+      // Attach to clickable images (projects and activity images)
+      function attachImageListeners(){
+        const imgs = document.querySelectorAll('.clickable-img, .activity-img');
+        imgs.forEach(img=>{
+          img.style.cursor='pointer';
+          img.addEventListener('click', ()=> openModal(img.src, img.alt));
+          img.addEventListener('touchstart', ()=> openModal(img.src, img.alt));
+        });
+      }
+
+      // Initial setup
+      attachImageListeners();
+
+      // Re-attach if DOM changes
+      const observer = new MutationObserver(()=> attachImageListeners());
+      observer.observe(document.body,{childList:true,subtree:true});
+
+      // Default page
+      showPage('about');
+
+      // Contact form: Basic client-side feedback (does not send email by itself)
+      const contactForm = document.getElementById('contactForm');
+      if(contactForm){
+        contactForm.addEventListener('submit', (e)=>{
+          e.preventDefault();
+          const msg = document.getElementById('formMessage');
+          msg.textContent = 'Thanks — your message was received (this form is client-side only).';
+          contactForm.reset();
+        });
+      }
+
+      // Make sure images are touch-friendly on mobile (prevent default long-press menu)
+      document.addEventListener('contextmenu', function(e){
+        if(e.target && (e.target.classList.contains('clickable-img')||e.target.classList.contains('activity-img'))){
+          e.preventDefault();
+        }
+      });
+
+    })();
+  </script>
 
 </body>
 
