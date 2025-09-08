@@ -2,432 +2,327 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Jaya Prakash Maneri - Portfolio</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio - Jaya Prakash Maneri</title>
+
+  <!-- CSS -->
   <link rel="stylesheet" href="./assets/css/style.css">
   <link rel="icon" href="./assets/images/logo.ico" type="image/x-icon">
+
+  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
-  <!-- Small internal styles for layout fixes that won't change your external css paths -->
+
   <style>
-    /* Keep minimal so your external style.css still controls design */
-    html,body{height:100%;margin:0;font-family:Poppins,system-ui,-apple-system,Segoe UI,Roboto,'Helvetica Neue',Arial}
-    .layout-container{display:flex;align-items:flex-start;gap:24px;padding:20px;max-width:1200px;margin:0 auto}
-    .sidebar{width:260px;flex:0 0 260px}
-    .main-content{flex:1;min-width:0}
-    @media (max-width:900px){
-      .layout-container{flex-direction:column;padding:12px}
-      .sidebar{width:100%;order:1}
-      .main-content{order:2}
-      nav.navbar{justify-content:center}
+    /* ===== LAYOUT ===== */
+    body {
+      margin: 0;
+      font-family: "Poppins", sans-serif;
+      background: #1e1e1e;
+      color: #fff;
     }
-    /* Simple utility for hidden */
-    .is-hidden{display:none!important}
-    /* Modal overlay tweaks */
-    .modal-container{position:fixed;inset:0;display:flex;align-items:center;justify-content:center;padding:20px;z-index:2000}
-    .modal-backdrop{position:fixed;inset:0;background:rgba(0,0,0,0.6)}
-    .modal-card{position:relative;max-width:900px;width:100%;z-index:2001}
-    .modal-card img{width:100%;height:auto;border-radius:12px}
-    .modal-close-btn{position:absolute;top:-10px;right:-10px;background:#fff;border-radius:50%;width:36px;height:36px;border:0;cursor:pointer;box-shadow:0 6px 20px rgba(0,0,0,0.2)}
+
+    .layout-container {
+      display: flex;
+      min-height: 100vh;
+    }
+
+    /* ===== SIDEBAR ===== */
+    .sidebar {
+      width: 300px; /* wider for laptop */
+      background: #111;
+      padding: 20px;
+      color: #fff;
+      flex-shrink: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      position: sticky;
+      top: 0;
+      height: 100vh;
+    }
+
+    .sidebar-info {
+      text-align: center;
+    }
+
+    .avatar-box img {
+      border-radius: 50%;
+      width: 120px;
+      height: 120px;
+    }
+
+    .info-content .name {
+      margin: 10px 0 5px;
+      font-size: 1.4rem;
+      font-weight: 600;
+    }
+
+    .info-content .title {
+      font-size: 0.9rem;
+      opacity: 0.8;
+    }
+
+    .contacts-list,
+    .social-list {
+      list-style: none;
+      padding: 0;
+      margin: 20px 0;
+    }
+
+    .contacts-list li,
+    .social-list li {
+      margin: 8px 0;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .social-list {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+    }
+
+    /* ===== MAIN CONTENT ===== */
+    .main-content {
+      flex: 1;
+      padding: 40px 60px;
+      overflow-y: auto;
+    }
+
+    .article-title {
+      font-size: 2rem;
+      margin-bottom: 15px;
+    }
+
+    section {
+      margin-bottom: 50px;
+    }
+
+    /* ===== NAVBAR ===== */
+    .navbar {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 40px;
+    }
+
+    .navbar-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.2em;
+      list-style: none;
+      padding: 0;
+    }
+
+    .navbar-link {
+      background: none;
+      border: none;
+      color: #fff;
+      font-size: 1rem;
+      cursor: pointer;
+      padding: 8px 15px;
+      border-radius: 8px;
+      transition: background 0.3s;
+    }
+
+    .navbar-link:hover,
+    .navbar-link.active {
+      background: #333;
+    }
+
+    /* ===== CONTACT FORM ===== */
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      max-width: 600px;
+    }
+
+    form input,
+    form textarea {
+      padding: 12px;
+      border-radius: 8px;
+      border: none;
+      width: 100%;
+    }
+
+    form button {
+      padding: 12px;
+      background: #ffb400;
+      color: #111;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: 600;
+    }
+
+    /* ===== MOBILE ===== */
+    @media (max-width: 900px) {
+      .layout-container {
+        flex-direction: column;
+      }
+
+      .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+        flex-direction: column;
+      }
+
+      .main-content {
+        padding: 20px;
+      }
+    }
   </style>
 </head>
 
 <body>
-
   <div class="layout-container">
 
+    <!-- SIDEBAR -->
     <aside class="sidebar" data-sidebar>
-      <div class="sidebar-info">
-        <figure class="avatar-box">
-          <img src="./assets/images/avatar.jpg" alt="Jaya Prakash Maneri" width="80">
-        </figure>
-        <div class="info-content">
-          <h1 class="name" title="Jaya Prakash Maneri">Jaya Prakash Maneri</h1>
-          <p class="title">B.Tech Computer Science Student</p>
+      <div>
+        <div class="sidebar-info">
+          <figure class="avatar-box">
+            <img src="./assets/images/avatar.jpg" alt="Jaya Prakash Maneri">
+          </figure>
+          <div class="info-content">
+            <h1 class="name">Jaya Prakash Maneri</h1>
+            <p class="title">B.Tech Computer Science Student</p>
+          </div>
         </div>
-        <button class="info_more-btn" data-sidebar-btn>
-          <span>Show Contacts</span>
-          <ion-icon name="chevron-down"></ion-icon>
-        </button>
-      </div>
 
-      <div class="sidebar-info_more is-hidden" data-sidebar-more>
-        <div class="separator"></div>
         <ul class="contacts-list">
-          <li class="contact-item">
-            <div class="icon-box"><ion-icon name="mail-outline"></ion-icon></div>
-            <div class="contact-info">
-              <p class="contact-title">Email</p>
-              <a href="mailto:manerijayaprakash@gmail.com" class="contact-link">manerijayaprakash@gmail.com</a>
-            </div>
-          </li>
-          <li class="contact-item">
-            <div class="icon-box"><ion-icon name="phone-portrait-outline"></ion-icon></div>
-            <div class="contact-info">
-              <p class="contact-title">Phone</p>
-              <a href="tel:+919014792534" class="contact-link">+91 90147 92534</a>
-            </div>
-          </li>
-          <li class="contact-item">
-            <div class="icon-box"><ion-icon name="calendar-outline"></ion-icon></div>
-            <div class="contact-info">
-              <p class="contact-title">Birthday</p>
-              <time datetime="2005-07-14">14 July, 2005</time>
-            </div>
-          </li>
-          <li class="contact-item">
-            <div class="icon-box"><ion-icon name="location-outline"></ion-icon></div>
-            <div class="contact-info">
-              <p class="contact-title">Location</p>
-              <address>Puttaparthi, India</address>
-            </div>
-          </li>
-          <li class="contact-item">
-            <div class="icon-box"><ion-icon name="document-outline"></ion-icon></div>
-            <div class="contact-info">
-              <p class="contact-title">Resume</p>
-              <a href="./assets/resume.pdf" class="contact-link" download>Download Resume</a>
-            </div>
-          </li>
-        </ul>
-        <div class="separator"></div>
-        <ul class="social-list">
-          <li class="social-item"><a href="https://www.linkedin.com/in/maneri-jaya-prakash" class="social-link" target="_blank"><ion-icon name="logo-linkedin"></ion-icon></a></li>
-          <li class="social-item"><a href="https://github.com/jayaprakashmaneri" class="social-link" target="_blank"><ion-icon name="logo-github"></ion-icon></a></li>
-          <li class="social-item"><a href="#" class="social-link"><ion-icon name="logo-instagram"></ion-icon></a></li>
+          <li><ion-icon name="mail-outline"></ion-icon><a href="mailto:manerijayaprakash@gmail.com">manerijayaprakash@gmail.com</a></li>
+          <li><ion-icon name="phone-portrait-outline"></ion-icon><a href="tel:+919014792534">+91 90147 92534</a></li>
+          <li><ion-icon name="calendar-outline"></ion-icon><time datetime="2005-07-14">14 July, 2005</time></li>
+          <li><ion-icon name="location-outline"></ion-icon><address>Puttaparthi, India</address></li>
+          <li><ion-icon name="document-outline"></ion-icon><a href="./assets/resume.pdf" download>Download Resume</a></li>
         </ul>
       </div>
 
+      <ul class="social-list">
+        <li><a href="https://www.linkedin.com/in/maneri-jaya-prakash" target="_blank"><ion-icon name="logo-linkedin"></ion-icon></a></li>
+        <li><a href="https://github.com/jayaprakashmaneri" target="_blank"><ion-icon name="logo-github"></ion-icon></a></li>
+        <li><a href="#"><ion-icon name="logo-instagram"></ion-icon></a></li>
+      </ul>
     </aside>
 
+    <!-- MAIN CONTENT -->
     <div class="main-content">
-
-      <nav class="navbar" style="display:flex;justify-content:flex-end;align-items:center;gap:12px;margin-bottom:18px;">
-        <ul class="navbar-list" style="display:flex;gap:1.2em;align-items:center;list-style:none;margin:0;padding:0;">
-          <li class="navbar-item"><button class="navbar-link active" data-nav-link="about">About</button></li>
-          <li class="navbar-item"><button class="navbar-link" data-nav-link="resume">Resume</button></li>
-          <li class="navbar-item"><button class="navbar-link" data-nav-link="portfolio">Projects</button></li>
-          <li class="navbar-item"><button class="navbar-link" data-nav-link="contact">Contact</button></li>
-          <li class="navbar-item"><button class="navbar-link" data-nav-link="education">Education</button></li>
-          <li class="navbar-item"><button class="navbar-link" data-nav-link="certifications">Certifications</button></li>
+      <!-- NAVBAR -->
+      <nav class="navbar">
+        <ul class="navbar-list">
+          <li><button class="navbar-link active">About</button></li>
+          <li><button class="navbar-link">Resume</button></li>
+          <li><button class="navbar-link">Projects</button></li>
+          <li><button class="navbar-link">Certifications</button></li>
+          <li><button class="navbar-link">Education</button></li>
+          <li><button class="navbar-link">Contact</button></li>
         </ul>
       </nav>
 
-      <!-- Certifications (replaces Activities) -->
-      <article class="certifications" data-page="certifications" style="display:none;">
-        <header><h2 class="h2 article-title">Certifications</h2></header>
+      <!-- ABOUT -->
+      <section id="about">
+        <h2 class="article-title">About Me</h2>
+        <p>I am a B.Tech Computer Science student (Graduating 2026, CGPA: 7.7/10) with skills in frontend development (React.js, JavaScript/TypeScript, HTML/CSS) and backend (Java, SQL, Python). Completed a Data Analytics internship building dashboards and improving reporting efficiency.</p>
+      </section>
+
+      <!-- RESUME -->
+      <section id="resume">
+        <h2 class="article-title">Resume</h2>
+
+        <!-- Internship Section -->
         <section class="timeline">
+          <div class="title-wrapper">
+            <div class="icon-box"><ion-icon name="briefcase-outline"></ion-icon></div>
+            <h3 class="h3">Internship</h3>
+          </div>
           <ol class="timeline-list">
             <li class="timeline-item">
-              <h4 class="h4 timeline-item-title">Google AI-ML Certification</h4>
-              <span>2024</span>
-              <p class="timeline-text">Completed foundational and applied ML coursework, projects in supervised learning and model evaluation.</p>
+              <h4 class="h4 timeline-item-title">Data Analytics Intern – SmartBridge</h4>
+              <span>May 2025 – Jul 2025</span>
+              <p class="timeline-text">
+                Completed a <b>2-month Data Analytics internship</b> organized by SmartBridge in collaboration with APSCHE.
+                <br><br>
+                <b>Key Contributions:</b>
+                <ul style="list-style-type: disc; margin-left: 20px;">
+                  <li>Developed interactive dashboards in <b>Tableau</b> for analyzing student performance data.</li>
+                  <li>Optimized SQL queries, improving reporting speed by <b>40%</b>.</li>
+                  <li>Analyzed and visualized <b>500+ records</b> to generate actionable insights.</li>
+                  <li>Strengthened knowledge of <b>data wrangling, visualization, and reporting</b>.</li>
+                </ul>
+              </p>
             </li>
+          </ol>
+        </section>
+
+        <!-- Academic Projects -->
+        <section class="timeline">
+          <div class="title-wrapper">
+            <div class="icon-box"><ion-icon name="school-outline"></ion-icon></div>
+            <h3 class="h3">Academic Projects</h3>
+          </div>
+          <ol class="timeline-list">
             <li class="timeline-item">
-              <h4 class="h4 timeline-item-title">AWS Cloud Foundations</h4>
-              <span>2024</span>
-              <p class="timeline-text">Fundamentals of cloud computing and core AWS services.</p>
-            </li>
-            <li class="timeline-item">
-              <h4 class="h4 timeline-item-title">Generative AI (Eduskill)</h4>
-              <span>2024</span>
-              <p class="timeline-text">Practical projects building prompt-based generative systems and evaluation.</p>
-            </li>
-            <li class="timeline-item">
-              <h4 class="h4 timeline-item-title">Salesforce Trailblazer Champion</h4>
-              <span>2023 – Present</span>
-              <p class="timeline-text">27 badges earned, active participation in platform learning and challenges.</p>
-            </li>
-            <li class="timeline-item">
-              <h4 class="h4 timeline-item-title">SQL for Data Analytics</h4>
+              <h4 class="h4 timeline-item-title">Student Performance Dashboard</h4>
               <span>2023</span>
-              <p class="timeline-text">Verified skills in write efficient queries and optimizing SQL performance.</p>
+              <p class="timeline-text">Developed using React, Tableau, and SQL for visualizing student performance data.</p>
+            </li>
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">Online Bookstore</h4>
+              <span>2023</span>
+              <p class="timeline-text">Full-stack e-commerce project with Java backend, MySQL database, and React frontend.</p>
+            </li>
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">Portfolio Website</h4>
+              <span>2024</span>
+              <p class="timeline-text">Responsive portfolio showcasing projects, skills, and achievements.</p>
             </li>
           </ol>
         </section>
-      </article>
+      </section>
 
-      <!-- About -->
-      <article class="about active" data-page="about">
-        <header><h2 class="h2 article-title">About me</h2></header>
-        <section class="about-text">
-          <p>I am a B.Tech Computer Science student (Graduating 2026, CGPA: 7.7/10) with skills in frontend development (React.js, JavaScript/TypeScript, HTML/CSS) and backend (Java, SQL, Python). Completed a Data Analytics internship building dashboards and improving reporting efficiency.</p>
-          <p>Experienced in full-stack applications, API integration, and responsive UIs. Certified in Google AI-ML, AWS Cloud, and Generative AI. Comfortable using AI-assisted coding tools and eager to contribute to scalable, user-focused products.</p>
-        </section>
+      <!-- PROJECTS -->
+      <section id="projects">
+        <h2 class="article-title">Projects</h2>
+        <p>Showcase of projects.</p>
+      </section>
 
-        <section class="service">
-          <h3 class="h3 service-title">What I'm doing</h3>
-          <ul class="service-list">
-            <li class="service-item">
-              <div class="service-icon-box"><img src="./assets/images/icon-dev.svg" alt="Full-Stack Development icon" width="40"></div>
-              <div class="service-content-box"><h4 class="h4 service-item-title">Full-Stack Development</h4><p class="service-item-text">Building responsive web applications with React.js, JavaScript/TypeScript, HTML/CSS, Java, Python, and SQL.</p></div>
-            </li>
-            <li class="service-item">
-              <div class="service-icon-box"><img src="./assets/images/icon-design.svg" alt="Data Analytics icon" width="40"></div>
-              <div class="service-content-box"><h4 class="h4 service-item-title">Data Analytics</h4><p class="service-item-text">Analyzing data and creating insightful visualizations using Tableau and SQL to drive business decisions.</p></div>
-            </li>
-            <li class="service-item">
-              <div class="service-icon-box"><img src="./assets/images/icon-quote.svg" alt="AI Enthusiast icon" width="40"></div>
-              <div class="service-content-box"><h4 class="h4 service-item-title">AI Enthusiast</h4><p class="service-item-text">Exploring and implementing AI-assisted coding tools like Copilot, ChatGPT, Perplexity, and Gemini to enhance development workflows.</p></div>
-            </li>
-          </ul>
-        </section>
+      <!-- CERTIFICATIONS -->
+      <section id="certifications">
+        <h2 class="article-title">Certifications</h2>
+        <p>Certification list here.</p>
+      </section>
 
-        <section class="testimonials">
-          <h3 class="h3 testimonials-title">Achievements &amp; Impact</h3>
-          <div class="testimonials-list has-scrollbar">
-            <div class="testimonials-item"><div class="content-card"><h4 class="h4 testimonials-item-title">Key Achievements</h4><ul><li><b>Google AI-ML Certification, AWS Cloud, Generative AI (Eduskill)</b></li><li><b>Salesforce Trailblazer Champion</b> (27 Badges, 6600 Points)</li><li><b>Merit-based B.Tech scholarship</b></li><li>Participated in hackathons and coding competitions</li></ul></div></div>
-            <div class="testimonials-item"><div class="content-card"><h4 class="h4 testimonials-item-title">Internship Impact</h4><ul><li>Improved reporting speed by <b>40%</b> through SQL query optimization.</li><li>Built Tableau dashboards for analyzing <b>500+ student records</b>.</li></ul></div></div>
-            <div class="testimonials-item"><div class="content-card"><h4 class="h4 testimonials-item-title">Project Highlights</h4><ul><li>Student Performance Dashboard (React, Tableau, SQL)</li><li>Online Bookstore (React, Java, MySQL)</li><li>Responsive Portfolio Website (React, HTML, CSS)</li></ul></div></div>
-          </div>
-        </section>
-      </article>
+      <!-- EDUCATION -->
+      <section id="education">
+        <h2 class="article-title">Education</h2>
+        <p>Education details here.</p>
+      </section>
 
-      <!-- Resume -->
-      <article class="resume" data-page="resume" style="display:none;">
-        <section class="service">
-          <h3 class="h3 service-title">What I'm doing</h3>
-          <ul class="service-list">
-            <li class="service-item"><div class="service-icon-box"><img src="./assets/images/icon-dev.svg" alt="Full-Stack Developer" width="40"></div><div class="service-content-box"><h4 class="h4 service-item-title">Full-Stack Development</h4><p class="service-item-text">Building responsive web applications with React.js, JavaScript/TypeScript, HTML/CSS, Java, Python, and SQL.</p></div></li>
-            <li class="service-item"><div class="service-icon-box"><img src="./assets/images/icon-design.svg" alt="Data Analytics" width="40"></div><div class="service-content-box"><h4 class="h4 service-item-title">Data Analytics</h4><p class="service-item-text">Analyzing data and creating insightful visualizations using Tableau and SQL to drive business decisions.</p></div></li>
-            <li class="service-item"><div class="service-icon-box"><img src="./assets/images/icon-quote.svg" alt="AI Enthusiast" width="40"></div><div class="service-content-box"><h4 class="h4 service-item-title">AI Enthusiast</h4><p class="service-item-text">Using AI-assisted coding tools to enhance development workflows.</p></div></li>
-          </ul>
-        </section>
-
-        <section class="timeline">
-          <div class="title-wrapper"><div class="icon-box"><ion-icon name="book-outline"></ion-icon></div><h3 class="h3">Academic Projects</h3></div>
-          <ol class="timeline-list">
-            <li class="timeline-item"><h4 class="h4 timeline-item-title">Academic Projects, Sanskrithi School of Engineering</h4><span>2022 – Present</span><p class="timeline-text">Led multiple full-stack projects: Student Performance Dashboard, Online Bookstore, Portfolio Website.</p></li>
-            <li class="timeline-item"><h4 class="h4 timeline-item-title">Salesforce Ecosystem, Trailblazer Community</h4><span>2023 – Present</span><p class="timeline-text">Earned 27 badges and active engagement in the Trailblazer community.</p></li>
-          </ol>
-        </section>
-
-        <section class="timeline">
-          <div class="title-wrapper"><div class="icon-box"><ion-icon name="trophy-outline"></ion-icon></div><h3 class="h3">Professional Impact</h3></div>
-          <ol class="timeline-list">
-            <li class="timeline-item"><h4 class="h4 timeline-item-title">Measurable contributions</h4><p class="timeline-text"><b>40%</b> Query Performance Improvement<br><b>500+</b> Records Analyzed<br><b>27</b> Salesforce Badges Earned<br><b>3</b> Major Projects Completed</p></li>
-          </ol>
-        </section>
-      </article>
-
-      <!-- Portfolio -->
-      <article class="portfolio" data-page="portfolio" style="display:none;">
-        <header><h2 class="h2 article-title">Featured Projects</h2></header>
-        <section class="projects">
-          <ul class="project-list">
-            <li class="project-item active">
-              <a href="#" class="project-link">
-                <figure class="project-img"><img src="./assets/images/project1.jpg" alt="Student Performance Dashboard" loading="lazy" class="clickable-img"></figure>
-                <h3 class="project-title">Student Performance Dashboard</h3>
-                <p class="project-category">Interactive dashboard for analyzing 500+ student records with advanced data visualizations and API integration.</p>
-                <ul><li>Built dashboard for 500+ student records</li><li>Advanced visualizations</li><li>SQL query optimization (40% faster)</li><li>Real-time API integration</li></ul>
-                <b>Technologies Used:</b> React, Tableau, SQL, REST APIs<br>
-                <a href="#" class="btn">Live Demo</a> <a href="#" class="btn">Source Code</a>
-              </a>
-            </li>
-            <li class="project-item active">
-              <a href="#" class="project-link">
-                <figure class="project-img"><img src="./assets/images/project2.jpg" alt="Online Bookstore" loading="lazy" class="clickable-img"></figure>
-                <h3 class="project-title">Online Bookstore</h3>
-                <p class="project-category">Full-stack e-commerce app with authentication and CRUD.</p>
-                <ul><li>User authentication</li><li>CRUD operations</li><li>Responsive UI</li><li>DB query optimization (25% faster)</li></ul>
-                <b>Technologies Used:</b> React, Java, MySQL, REST APIs<br>
-                <a href="#" class="btn">Live Demo</a> <a href="#" class="btn">Source Code</a>
-              </a>
-            </li>
-            <li class="project-item active">
-              <a href="#" class="project-link">
-                <figure class="project-img"><img src="./assets/images/project3.jpg" alt="Portfolio Website" loading="lazy" class="clickable-img"></figure>
-                <h3 class="project-title">Portfolio Website</h3>
-                <p class="project-category">Modern, responsive portfolio website showcasing projects and achievements.</p>
-                <ul><li>Responsive design</li><li>Dark/light mode toggle</li><li>Accessibility features</li></ul>
-                <b>Technologies Used:</b> React, HTML, CSS, JavaScript<br>
-                <a href="#" class="btn">Live Demo</a> <a href="#" class="btn">Source Code</a>
-              </a>
-            </li>
-          </ul>
-        </section>
-      </article>
-
-      <!-- Contact -->
-      <article class="contact" data-page="contact" style="display:none;">
-        <header><h2 class="h2 article-title">Get In Touch</h2><p style="text-align:center;color:#666;margin-top:8px">I'm open to opportunities and collaborations.</p></header>
-        <section class="contact-section">
-          <div class="container">
-            <div class="contact-content">
-              <div class="lets-connect">
-                <h2>Let's Connect</h2>
-                <div class="contact-info">
-                  <div class="contact-item"><div class="contact-icon email-icon">✉</div><div class="contact-details"><h3>EMAIL</h3><p>manerijayaprakash@gmail.com</p></div></div>
-                  <div class="contact-item"><div class="contact-icon phone-icon">📞</div><div class="contact-details"><h3>PHONE</h3><p>+91 90147 92534</p></div></div>
-                  <div class="contact-item"><div class="contact-icon location-icon">📍</div><div class="contact-details"><h3>LOCATION</h3><p>Puttaparthi, India</p></div></div>
-                  <div class="contact-item"><div class="contact-icon linkedin-icon">💼</div><div class="contact-details"><h3>LINKEDIN</h3><p>maneri-jaya-prakash</p></div></div>
-                </div>
-              </div>
-
-              <div class="send-message">
-                <h2>Send a Message</h2>
-                <form id="contactForm" class="message-form">
-                  <div class="form-row" style="display:flex;gap:12px;flex-wrap:wrap;">
-                    <div class="form-field" style="flex:1;"><label>Your Name</label><input type="text" name="name" placeholder="Enter your name" required></div>
-                    <div class="form-field" style="flex:1;"><label>Email Address</label><input type="email" name="email" placeholder="Enter your email" required></div>
-                  </div>
-                  <div class="form-field"><label>Subject</label><input type="text" name="subject" placeholder="What's this about?" required></div>
-                  <div class="form-field"><label>Message</label><textarea name="message" rows="5" placeholder="Tell me about your project..." required></textarea></div>
-                  <button type="submit" class="send-button"><span>✈</span> Send Message</button>
-                </form>
-                <div id="formMessage" class="form-message"></div>
-              </div>
-
-            </div>
-          </div>
-        </section>
-      </article>
-
-      <!-- Education -->
-      <article class="education" data-page="education" style="display:none;">
-        <header><h2 class="h2 article-title">Education</h2><p style="text-align:center;color:#666;margin-top:8px">Strong academic foundation in computer science and mathematics</p></header>
-        <section class="education-cards">
-          <div class="edu-card">
-            <div style="flex:1;">
-              <h3>B.Tech in Computer Science</h3>
-              <a href="#">Sanskrithi School of Engineering</a>
-              <div>Anantapur, India • 2022 – 2026</div>
-              <div>Comprehensive program covering software development, DS &amp; Algo, and modern technologies.</div>
-            </div>
-            <div style="text-align:right;min-width:100px;"><div style="font-size:1.5em;font-weight:700;color:#22c55e;">7.7/10</div><span>Currently Pursuing</span></div>
-          </div>
-          <div class="edu-card">
-            <div style="flex:1;">
-              <h3>Class XII (Senior Secondary)</h3>
-              <a href="#">AP State Board</a>
-              <div>Andhra Pradesh, India • 2022</div>
-              <div>Completed higher secondary focused on Mathematics, Physics, and Chemistry.</div>
-            </div>
-            <div style="text-align:right;min-width:100px;"><div style="font-size:1.5em;font-weight:700;color:#2563eb;">84.9%</div><span>Completed</span></div>
-          </div>
-          <div class="edu-card">
-            <div style="flex:1;">
-              <h3>Class X (Secondary)</h3>
-              <a href="#">AP State Board</a>
-              <div>Andhra Pradesh, India • 2020</div>
-              <div>Strong academic foundation with excellent performance across subjects.</div>
-            </div>
-            <div style="text-align:right;min-width:100px;"><div style="font-size:1.5em;font-weight:700;color:#22c55e;">94%</div><span>Completed</span></div>
-          </div>
-        </section>
-      </article>
-
-      <!-- Shared modal container used by projects and certifications images -->
-      <div id="globalModal" class="modal-container is-hidden" aria-hidden="true">
-        <div class="modal-backdrop"></div>
-        <div class="modal-card" role="dialog" aria-modal="true">
-          <button class="modal-close-btn" id="globalModalClose" aria-label="Close">&times;</button>
-          <img id="globalModalImg" src="" alt="Full view">
-          <h3 id="globalModalCaption" style="color:#fff;margin-top:12px;text-align:center"></h3>
-        </div>
-      </div>
-
+      <!-- CONTACT (moved to last) -->
+      <section id="contact">
+        <h2 class="article-title">Contact Me</h2>
+        <form>
+          <input type="text" placeholder="Your Name" required>
+          <input type="email" placeholder="Your Email" required>
+          <textarea placeholder="Your Message" rows="5" required></textarea>
+          <button type="submit">Send Message</button>
+        </form>
+      </section>
     </div>
   </div>
 
+  <!-- JS -->
   <script src="./assets/js/script.js"></script>
+
+  <!-- Icons -->
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-
-  <script>
-    // Inline JS to ensure nav switching + modal behavior works even if original script.js needs tweaks.
-    (function(){
-      const navLinks = document.querySelectorAll('.navbar-link');
-      const pages = document.querySelectorAll('[data-page]');
-      const sidebarBtn = document.querySelector('[data-sidebar-btn]');
-      const sidebarMore = document.querySelector('[data-sidebar-more]');
-
-      function showPage(name){
-        pages.forEach(p=>{
-          if(p.dataset.page===name){ p.style.display='block'; p.classList.add('active') }
-          else { p.style.display='none'; p.classList.remove('active') }
-        });
-        navLinks.forEach(btn=> btn.classList.toggle('active', btn.dataset.navLink===name));
-        window.scrollTo({top:0,behavior:'smooth'});
-      }
-
-      navLinks.forEach(btn=>{
-        btn.addEventListener('click', ()=> showPage(btn.dataset.navLink));
-      });
-
-      // Sidebar show contacts toggle
-      if(sidebarBtn && sidebarMore){
-        sidebarBtn.addEventListener('click', ()=> sidebarMore.classList.toggle('is-hidden'));
-      }
-
-      // Modal logic for images (click and touch)
-      const modal = document.getElementById('globalModal');
-      const modalImg = document.getElementById('globalModalImg');
-      const modalCaption = document.getElementById('globalModalCaption');
-      const modalClose = document.getElementById('globalModalClose');
-
-      function openModal(src, alt){
-        modalImg.src = src;
-        modalImg.alt = alt || '';
-        modalCaption.textContent = alt || '';
-        modal.classList.remove('is-hidden');
-        modal.setAttribute('aria-hidden','false');
-      }
-      function closeModal(){
-        modal.classList.add('is-hidden');
-        modal.setAttribute('aria-hidden','true');
-        modalImg.src = '';
-        modalCaption.textContent = '';
-      }
-
-      modalClose.addEventListener('click', closeModal);
-      modal.querySelector('.modal-backdrop').addEventListener('click', closeModal);
-      document.addEventListener('keydown', (e)=>{ if(e.key==='Escape') closeModal(); });
-
-      // Attach to clickable images (projects and activity images)
-      function attachImageListeners(){
-        const imgs = document.querySelectorAll('.clickable-img, .activity-img');
-        imgs.forEach(img=>{
-          img.style.cursor='pointer';
-          img.addEventListener('click', ()=> openModal(img.src, img.alt));
-          img.addEventListener('touchstart', ()=> openModal(img.src, img.alt));
-        });
-      }
-
-      // Initial setup
-      attachImageListeners();
-
-      // Re-attach if DOM changes
-      const observer = new MutationObserver(()=> attachImageListeners());
-      observer.observe(document.body,{childList:true,subtree:true});
-
-      // Default page
-      showPage('about');
-
-      // Contact form: Basic client-side feedback (does not send email by itself)
-      const contactForm = document.getElementById('contactForm');
-      if(contactForm){
-        contactForm.addEventListener('submit', (e)=>{
-          e.preventDefault();
-          const msg = document.getElementById('formMessage');
-          msg.textContent = 'Thanks — your message was received (this form is client-side only).';
-          contactForm.reset();
-        });
-      }
-
-      // Make sure images are touch-friendly on mobile (prevent default long-press menu)
-      document.addEventListener('contextmenu', function(e){
-        if(e.target && (e.target.classList.contains('clickable-img')||e.target.classList.contains('activity-img'))){
-          e.preventDefault();
-        }
-      });
-
-    })();
-  </script>
-
 </body>
-
 </html>

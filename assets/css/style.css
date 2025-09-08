@@ -1940,8 +1940,8 @@ textarea.form-input::-webkit-resizer { display: none; }
 
 .email-icon { background: #dc3545; }
 .phone-icon { background: #28a745; }
-.location-icon { background: #007bff; }
-.linkedin-icon { background: #0066cc; }
+.location-icon { background: #20c997; }
+.linkedin-icon { background: #8e44ad; }
 
 .contact-details h3 {
   font-size: 0.9rem;
@@ -2008,9 +2008,9 @@ textarea.form-input::-webkit-resizer { display: none; }
 .form-field input:focus,
 .form-field textarea:focus {
   outline: none;
-  border-color: #007bff;
+  border-color: #20c997;
   background: white;
-  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.1);
+  box-shadow: 0 0 0 3px rgba(32, 201, 151, 0.1);
 }
 
 .form-field textarea {
