@@ -10,28 +10,23 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
-<body>
-  <div class="layout-container">
-    <aside class="sidebar" data-sidebar>
+<div class="layout-container" style="display: flex; align-items: flex-start;">
+  <aside class="sidebar" data-sidebar>
       <div class="sidebar-info">
         <figure class="avatar-box">
-          <img src="./assets/images/avatar.jpg" alt="Jaya Prakash Maneri" width="120" height="120">
+          <img src="./assets/images/avatar.jpg" alt="Jaya Prakash Maneri" width="80">
         </figure>
-
         <div class="info-content">
           <h1 class="name" title="Jaya Prakash Maneri">Jaya Prakash Maneri</h1>
-          <p class="title">Frontend Developer</p>
+          <p class="title">B.Tech Computer Science Student </p>
         </div>
-
         <button class="info_more-btn" data-sidebar-btn>
           <span>Show Contacts</span>
           <ion-icon name="chevron-down"></ion-icon>
         </button>
       </div>
-
-      <div class="sidebar-info_more is-hidden" data-sidebar-info>
+      <div class="sidebar-info_more">
         <div class="separator"></div>
-
         <ul class="contacts-list">
           <li class="contact-item">
             <div class="icon-box">
@@ -42,7 +37,6 @@
               <a href="mailto:manerijayaprakash@gmail.com" class="contact-link">manerijayaprakash@gmail.com</a>
             </div>
           </li>
-
           <li class="contact-item">
             <div class="icon-box">
               <ion-icon name="phone-portrait-outline"></ion-icon>
@@ -52,7 +46,6 @@
               <a href="tel:+919014792534" class="contact-link">+91 90147 92534</a>
             </div>
           </li>
-
           <li class="contact-item">
             <div class="icon-box">
               <ion-icon name="calendar-outline"></ion-icon>
@@ -62,7 +55,6 @@
               <time datetime="2005-07-14">14 July, 2005</time>
             </div>
           </li>
-
           <li class="contact-item">
             <div class="icon-box">
               <ion-icon name="location-outline"></ion-icon>
@@ -72,7 +64,6 @@
               <address>Puttaparthi, India</address>
             </div>
           </li>
-
           <li class="contact-item">
             <div class="icon-box">
               <ion-icon name="document-outline"></ion-icon>
@@ -83,9 +74,7 @@
             </div>
           </li>
         </ul>
-
         <div class="separator"></div>
-
         <ul class="social-list">
           <li class="social-item">
             <a href="https://www.linkedin.com/in/maneri-jaya-prakash" class="social-link" target="_blank">
@@ -104,7 +93,8 @@
           </li>
         </ul>
       </div>
-    </aside>
+
+  </aside>
     <div class="main-content">
       <nav class="navbar">
         <ul class="navbar-list">
@@ -129,54 +119,89 @@
           </p>
         </section>
         <section class="service">
+
           <h3 class="h3 service-title">What I'm doing</h3>
+
           <ul class="service-list">
+
             <li class="service-item">
+
               <div class="service-icon-box">
-                <img src="./assets/images/icon-dev.svg" alt="Full-Stack Development icon" width="40">
+          <img src="./assets/images/icon-dev.svg" alt="Full-Stack Development icon" width="40">
               </div>
+
               <div class="service-content-box">
-                <h4 class="h4 service-item-title">Full-Stack Development</h4>
-                <p class="service-item-text">
-                  Building responsive web applications with React.js, JavaScript/TypeScript, HTML/CSS, Java, Python, and SQL.
-                </p>
+          <h4 class="h4 service-item-title">Full-Stack Development</h4>
+
+          <p class="service-item-text">
+            Building responsive web applications with React.js, JavaScript/TypeScript, HTML/CSS, Java, Python, and
+            SQL.
+          </p>
+
               </div>
+
             </li>
+
             <li class="service-item">
+
               <div class="service-icon-box">
-                <img src="./assets/images/icon-design.svg" alt="Data Analytics icon" width="40">
+          <img src="./assets/images/icon-design.svg" alt="Data Analytics icon" width="40">
               </div>
+
               <div class="service-content-box">
-                <h4 class="h4 service-item-title">Data Analytics</h4>
-                <p class="service-item-text">
-                  Analyzing data and creating insightful visualizations using Tableau and SQL to drive business decisions.
-                </p>
+          <h4 class="h4 service-item-title">Data Analytics</h4>
+
+          <p class="service-item-text">
+            Analyzing data and creating insightful visualizations using Tableau and SQL to drive business
+            decisions.
+          </p>
+
               </div>
+
             </li>
+
             <li class="service-item">
+
               <div class="service-icon-box">
-                <img src="./assets/images/icon-quote.svg" alt="AI Enthusiast icon" width="40">
+          <img src="./assets/images/icon-quote.svg" alt="AI Enthusiast icon" width="40">
               </div>
+
               <div class="service-content-box">
-                <h4 class="h4 service-item-title">AI Enthusiast</h4>
-                <p class="service-item-text">
-                  Exploring and implementing AI-assisted coding tools like Copilot, ChatGPT, Perplexity, and Gemini to enhance development workflows.
-                </p>
+          <h4 class="h4 service-item-title">AI Enthusiast</h4>
+
+          <p class="service-item-text">
+            Exploring and implementing AI-assisted coding tools like Copilot, ChatGPT, Perplexity, and Gemini to
+            enhance development workflows.
+          </p>
+
               </div>
+
             </li>
+
             <li class="service-item">
+
               <div class="service-icon-box">
-                <img src="./assets/images/icon-design.svg" alt="Team Collaboration icon" width="40">
+          <img src="./assets/images/icon-design.svg" alt="Team Collaboration icon" width="40">
               </div>
+
               <div class="service-content-box">
-                <h4 class="h4 service-item-title">Team Collaboration</h4>
-                <p class="service-item-text">
-                  Collaborating effectively in Agile/Scrum environments to deliver high-quality software solutions.
-                </p>
+          <h4 class="h4 service-item-title">Team Collaboration</h4>
+
+          <p class="service-item-text">
+            Collaborating effectively in Agile/Scrum environments to deliver high-quality software solutions.
+          </p>
+
               </div>
+
+            </li>
+
+          </ul>
+
+        </section>
+
             </li>
           </ul>
-        </section>
+        
         <section class="testimonials">
           <h3 class="h3 testimonials-title">Achievements &amp; Impact</h3>
           <div class="testimonials-list has-scrollbar">
@@ -231,6 +256,7 @@
       <article class="resume is-hidden" data-page="resume">
         <header>
           <h2 class="article-title">Resume</h2>
+          <a href="./assets/resume.pdf" download class="btn btn-download-resume" style="margin-left: 20px; font-size: 0.9em; padding: 6px 12px; background-color: #f0c040; color: #000; border-radius: 4px; text-decoration: none;">Download Resume</a>
         </header>
         <section class="timeline">
           <div class="title-wrapper">
@@ -549,4 +575,3 @@
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </body>
 </html>
-

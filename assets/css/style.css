@@ -1,4 +1,4 @@
-
+n change 
 /* ===== CUSTOM PROPERTIES ===== */
 :root {
   /* Colors */
@@ -102,7 +102,7 @@ body { background: var(--background-dark); }
 /* ===== SIDEBAR ===== */
 .sidebar {
   width: 300px;
-  background: #121212;
+  background: #2c3e50; /* Changed background color to a dark blue shade */
   padding: 20px;
   color: var(--text-white);
   flex-shrink: 0;
@@ -215,7 +215,52 @@ body { background: var(--background-dark); }
 }
 
 .sidebar-info_more {
-  display: none;
+  background-color: #fff;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  margin-top: 1rem;
+  color: #9b8de3;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar-info_more .contact-item {
+  background-color: #f9f9f9;
+  margin-bottom: 0.75rem;
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: #9b8de3;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  min-width: 250px; /* Added minimum width for better visibility */
+}
+
+.sidebar-info_more .contact-item .icon-box {
+  background-color: #000;
+  color: #9b8de3;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sidebar-info_more .contact-item .contact-info p,
+.sidebar-info_more .contact-item .contact-info a {
+  color: #9b8de3;
+  font-weight: 500;
+  font-size: 0.9rem;
+  margin: 0;
+  text-decoration: none;
+}
+
+.sidebar-info_more .contact-item .contact-info address {
+  color: #6c757d; /* Darker gray for better visibility */
+  font-weight: 500;
+  font-size: 0.9rem;
+  margin: 0;
+  font-style: normal;
 }
 
 .sidebar-info_more:not(.is-hidden) {
@@ -531,9 +576,27 @@ article[data-page].active {
 }
 
 .project-category {
-  color: var(--white-2); /* Brighter text */
+  color: #6a9ae2; /* Softer blue for better appeal */
   font-size: var(--fs-5);
   margin-bottom: 10px;
+  font-weight: 600;
+  font-style: italic;
+  transition: color 0.3s ease;
+}
+
+.project-category:hover {
+  color: #a18cd1; /* Light purple on hover */
+  cursor: pointer;
+}
+
+.project-img img {
+  transition: transform 0.3s ease;
+  cursor: zoom-in;
+}
+
+.project-img img:hover {
+  transform: scale(1.1);
+  cursor: zoom-in;
 }
 
 .project-item ul {
