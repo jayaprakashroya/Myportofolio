@@ -31,33 +31,26 @@
   }
 
   if (contactForm) {
+    (function() {
+      emailjs.init('3KSkOqbfI39Sm04b7');
+    })();
     contactForm.addEventListener('submit', async (e) => {
       e.preventDefault();
       formMessage.textContent = '';
       formMessage.classList.remove('success', 'error');
       const formData = new FormData(contactForm);
-      const data = {
-        fullname: formData.get('fullname'),
-        email: formData.get('email'),
+      const templateParams = {
+        from_name: formData.get('fullname'),
+        from_email: formData.get('email'),
         message: formData.get('message')
       };
       try {
-        const response = await fetch('http://localhost:5000/api/contact', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify(data)
-        });
-        const result = await response.json();
-        if (response.ok) {
-          formMessage.textContent = result.message || 'Message sent successfully!';
-          formMessage.classList.add('success');
-          contactForm.reset();
-        } else {
-          formMessage.textContent = result.error || 'Failed to send message.';
-          formMessage.classList.add('error');
-        }
+        const result = await emailjs.send('service_lojhawa', 'template_qkwsv9y', templateParams);
+        formMessage.textContent = 'Message sent successfully!';
+        formMessage.classList.add('success');
+        contactForm.reset();
       } catch (error) {
-        formMessage.textContent = 'Network error. Please try again later.';
+        formMessage.textContent = 'Failed to send message. Please try again.';
         formMessage.classList.add('error');
       }
     });
