@@ -1,4 +1,5 @@
 
+
 /* ===== CUSTOM PROPERTIES ===== */
 :root {
   /* Light Theme Background Colors */
@@ -85,6 +86,7 @@ button {
   background: none;
   border: none;
   text-align: left;
+  text-align: left;
   cursor: pointer;
 }
 
@@ -104,7 +106,55 @@ input, textarea {
 
 html { font-family: var(--ff-poppins); }
 
-body { background: var(--background-light); }
+body, .main-content {
+  background: #f4f6fb; /* Softer light background for main area */
+  color: var(--text-dark) !important; /* High contrast text for readability */
+}
+
+/* ===== LAYOUT ===== */
+.layout-container {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* ===== BUTTON ===== */
+button {
+  font: inherit;
+  background: none;
+  border: none;
+  text-align: left;
+  cursor: pointer;
+}
+
+/* ===== BUTTON ===== */
+button {
+  font: inherit;
+  background: none;
+  border: none;
+  text-align: left;
+  cursor: pointer;
+}
+
+input, textarea {
+  display: block;
+  width: 100%;
+  background: none;
+  font: inherit;
+}
+
+::selection {
+  background: var(--accent-purple);
+  color: var(--text-dark);
+}
+
+:focus { outline-color: var(--accent-purple); }
+
+html { font-family: var(--ff-poppins); }
+
+body, .main-content {
+  background: #f4f6fb; /* Softer light background for main area */
+  color: var(--text-dark) !important; /* High contrast text for readability */
+}
 
 /* ===== LAYOUT ===== */
 .layout-container {
@@ -238,46 +288,139 @@ body { background: var(--background-light); }
 
 .sidebar-info_more .contact-item {
   background-color: #f9f9f9;
-  margin-bottom: 0.75rem;
-  padding: 0.75rem 1rem;
-  border-radius: 0.5rem;
+  margin-bottom: 0.5rem;      /* Reduced margin */
+  padding: 0.5rem 0.7rem;     /* Reduced padding */
+  border-radius: 0.35rem;     /* Smaller radius */
   display: flex;
   align-items: center;
-  gap: 0.75rem;
+  gap: 0.5rem;                /* Reduced gap */
   color: #9b8de3;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-  min-width: 250px; /* Added minimum width for better visibility */
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04); /* Lighter shadow */
+  min-width: 180px;           /* Reduced min width */
+  font-size: 0.85rem;         /* Smaller font */
 }
 
 .sidebar-info_more .contact-item .icon-box {
-  background-color: #000;
-  color: #9b8de3;
-  padding: 0.5rem;
+  width: 22px;                /* Smaller icon */
+  height: 22px;
+  font-size: 13px;
+  border-radius: 0.35rem;
+  padding: 0.2rem;
+}
+
+.sidebar-info_more .contact-item .contact-info p,
+.sidebar-info_more .contact-item .contact-info a,
+.sidebar-info_more .contact-item .contact-info address {
+  font-size: 0.85rem;         /* Smaller text */
+  font-weight: 500;
+  margin: 0;
+  color: #6c757d;
+}
+
+/* --- Compact Sidebar Contact Cards --- */
+.sidebar-info_more .contact-item {
+  background-color: #f9f9f9;
+  margin-bottom: 0.4rem;
+  padding: 0.6rem 0.8rem;
   border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  min-width: 0;
+  font-size: 0.92rem;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+}
+
+.sidebar-info_more .contact-item .icon-box {
+  width: 26px;
+  height: 26px;
+  font-size: 15px;
+  border-radius: 6px;
+  padding: 0.15rem;
+}
+
+.sidebar-info_more .contact-item .contact-info p {
+  font-size: 0.95rem;
+  font-weight: 600;
+  margin-bottom: 2px;
+  color: #2c3e50;
+}
+
+.sidebar-info_more .contact-item .contact-info a,
+.sidebar-info_more .contact-item .contact-info time,
+.sidebar-info_more .contact-item .contact-info address {
+  font-size: 0.92rem;
+  color: #6c757d;
+  font-weight: 400;
+  margin: 0;
+  word-break: break-all;
+}
+
+/* --- Responsive: Make sidebar contacts even smaller on mobile --- */
+@media (max-width: 480px) {
+  .sidebar-info_more .contact-item {
+    padding: 0.4rem 0.5rem;
+    border-radius: 0.35rem;
+    font-size: 0.85rem;
+    gap: 0.4rem;
+  }
+  .sidebar-info_more .contact-item .icon-box {
+    width: 20px;
+    height: 20px;
+    font-size: 12px;
+    border-radius: 4px;
+  }
+  .sidebar-info_more .contact-item .contact-info p,
+  .sidebar-info_more .contact-item .contact-info a,
+  .sidebar-info_more .contact-item .contact-info time,
+  .sidebar-info_more .contact-item .contact-info address {
+    font-size: 0.85rem;
+  }
+}
+
+
+
+.sidebar-info_more:not(.is-hidden) {
+  display: block;
+}
+
+/* ===== CONTACTS LIST STYLES ===== */
+.contacts-list li.contact-item {
+  padding: 10px 12px;
+  margin-bottom: 8px;
+  border-radius: 8px;
+  box-shadow: 0 1px 6px rgba(0,0,0,0.06);
+  background: #fff;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.contacts-list .icon-box {
+  width: 32px;
+  height: 32px;
+  font-size: 18px;
+  border-radius: 6px;
+  background: #f3f4f6;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.sidebar-info_more .contact-item .contact-info p,
-.sidebar-info_more .contact-item .contact-info a {
-  color: #9b8de3;
+.contacts-list .contact-info p {
   font-weight: 500;
-  font-size: 0.9rem;
-  margin: 0;
-  text-decoration: none;
+  margin-bottom: 2px;
+  font-size: 0.95rem;
 }
 
-.sidebar-info_more .contact-item .contact-info address {
-  color: #6c757d; /* Darker gray for better visibility */
-  font-weight: 500;
-  font-size: 0.9rem;
+.contacts-list .contact-info a,
+.contacts-list .contact-info time,
+.contacts-list .contact-info address {
+  font-size: 0.93rem;
+  color: #444;
   margin: 0;
-  font-style: normal;
-}
-
-.sidebar-info_more:not(.is-hidden) {
-  display: block;
+  font-weight: 400;
+  word-break: break-all;
 }
 
 /* ===== MAIN CONTENT ===== */
@@ -328,6 +471,10 @@ article[data-page].active {
   display: flex;
   justify-content: center;
   margin-bottom: 40px;
+  background: #fff; /* White navbar for contrast */
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  border-radius: 10px;
+  padding: 10px 0;
 }
 
 .navbar-list {
@@ -341,18 +488,19 @@ article[data-page].active {
 .navbar-link {
   background: none;
   border: none;
-  color: var(--text-white);
+  color: #222; /* Dark text for navbar links */
   font-size: var(--fs-5);
   cursor: pointer;
   padding: 8px 15px;
   border-radius: 8px;
   transition: background var(--transition-1);
+  font-weight: 500;
 }
 
 .navbar-link:hover,
 .navbar-link.active {
-  background: #333;
-  color: var(--accent-purple);
+  background: var(--accent-purple);
+  color: #fff;
 }
 
 /* ===== ABOUT ===== */
@@ -584,7 +732,7 @@ article[data-page].active {
 
 .project-title {
   font-size: var(--fs-3);
-  color: var(--text-white); /* High contrast */
+  color: var(--text-dark) !important; /* High contrast for headings */
   font-weight: var(--fw-600); /* Bolder */
   margin-bottom: 10px;
 }
@@ -620,8 +768,14 @@ article[data-page].active {
   margin-bottom: 10px;
 }
 
-.project-item b {
-  color: var(--text-white); /* High contrast */
+.project-item b,
+.project-item .project-meta,
+.project-item .project-desc,
+.project-item .project-tech,
+.project-item .project-tech-title,
+.project-item .project-tech-list,
+.project-item .project-tech-list li {
+  color: var(--text-dark) !important;
 }
 
 .btn {
@@ -659,7 +813,7 @@ article[data-page].active {
 
 .timeline-item {
   position: relative;
-  background: var(--background-light); /* Lighter background */
+  background: #fff; /* White card for best contrast */
   padding: 25px; /* Increased padding */
   border-radius: 16px;
   margin-bottom: 20px;
@@ -699,7 +853,7 @@ article[data-page].active {
 
 .timeline-item-title {
   font-size: var(--fs-3);
-  color: var(--text-white); /* High contrast */
+  color: var(--text-dark) !important; /* High contrast for headings */
   font-weight: var(--fw-600); /* Bolder */
   margin-bottom: 10px;
 }
@@ -738,7 +892,7 @@ article[data-page].active {
 }
 
 .edu-card {
-  background: var(--background-light); /* Lighter background */
+  background: #fff; /* White card for best contrast */
   border-radius: 16px;
   padding: 25px; /* Increased padding */
   display: flex;
@@ -774,8 +928,10 @@ article[data-page].active {
 
 .edu-card h3,
 .edu-card div,
-.edu-card a {
-  color: var(--text-white); /* High contrast */
+.edu-card a,
+.edu-card p,
+.edu-card span {
+  color: var(--text-dark); /* High contrast for white background */
 }
 
 .edu-card > div:last-child > div {
@@ -794,7 +950,7 @@ article[data-page].active {
 }
 
 .certification-card {
-  background: var(--background-light); /* Lighter background */
+  background: #fff; /* White card for best contrast */
   border-radius: 16px;
   padding: 25px; /* Increased padding */
   border: 1px solid transparent;
@@ -824,7 +980,7 @@ article[data-page].active {
 
 .certification-title {
   font-size: var(--fs-3);
-  color: var(--text-white); /* High contrast */
+  color: var(--text-dark) !important; /* High contrast for headings */
   font-weight: var(--fw-600); /* Bolder */
   margin-bottom: 10px;
 }
@@ -900,6 +1056,7 @@ article[data-page].active {
 .phone-icon    { background: #28a745; }
 .location-icon { background: #2563eb; }
 .linkedin-icon { background: var(--primary-blue); }
+.github-icon   { background: #333333; }
 
 .contact-details h3 {
   font-size: 1.05rem;

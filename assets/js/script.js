@@ -1,4 +1,5 @@
 (function() {
+  emailjs.init('3KSkOqbfI39Sm04b7');
   const navLinks = document.querySelectorAll('.navbar-link');
   const pages = document.querySelectorAll('[data-page]');
   const sidebarBtn = document.querySelector('[data-sidebar-btn]');
@@ -32,9 +33,7 @@
   }
 
   if (contactForm) {
-    (function() {
-      emailjs.init('3KSkOqbfI39Sm04b7');
-    })();
+    emailjs.init('3KSkOqbfI39Sm04b7');
     contactForm.addEventListener('submit', async (e) => {
       e.preventDefault();
       if (successMessage) successMessage.style.display = 'none';
