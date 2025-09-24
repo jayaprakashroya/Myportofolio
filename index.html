@@ -506,94 +506,93 @@
         <section class="contact-section">
           <div class="container">
             <div class="contact-content">
+              <!-- Left: Contact Info -->
               <div class="lets-connect">
                 <h2>Let's Connect</h2>
                 <div class="contact-info">
                   <div class="contact-item">
-                    <div class="contact-icon email-icon">✉</div>
+                    <span class="contact-icon email-icon">
+                      <i class="fas fa-envelope"></i>
+                    </span>
                     <div class="contact-details">
                       <h3>EMAIL</h3>
                       <p>manerijayaprakash@gmail.com</p>
                     </div>
                   </div>
                   <div class="contact-item">
-                    <div class="contact-icon phone-icon">📞</div>
+                    <span class="contact-icon phone-icon">
+                      <i class="fas fa-phone"></i>
+                    </span>
                     <div class="contact-details">
                       <h3>PHONE</h3>
                       <p>+91 90147 92534</p>
                     </div>
                   </div>
                   <div class="contact-item">
-                    <div class="contact-icon location-icon">📍</div>
+                    <span class="contact-icon location-icon">
+                      <i class="fas fa-map-marker-alt"></i>
+                    </span>
                     <div class="contact-details">
                       <h3>LOCATION</h3>
                       <p>Puttaparthi, India</p>
                     </div>
                   </div>
                   <div class="contact-item">
-                    <div class="contact-icon linkedin-icon">💼</div>
+                    <span class="contact-icon linkedin-icon">
+                      <i class="fab fa-linkedin-in"></i>
+                    </span>
                     <div class="contact-details">
                       <h3>LINKEDIN</h3>
-                      <p>maneri-jaya-prakash</p>
+                      <p>
+                        <a href="https://www.linkedin.com/in/maneri-jaya-prakash" target="_blank" rel="noopener">
+                          maneri-jaya-prakash
+                        </a>
+                      </p>
                     </div>
                   </div>
-                </div>
-                <div class="professional-profiles">
-                  <h3>Professional Profiles</h3>
-                  <div class="profile-cards">
-                    <div class="profile-card linkedin-card">
-                      <div class="profile-icon">
-                        <ion-icon name="logo-linkedin"></ion-icon>
-                      </div>
-                      <div class="profile-content">
-                        <h4>LinkedIn Profile</h4>
-                        <p>Connect with me professionally</p>
-                        <a href="https://www.linkedin.com/in/maneri-jaya-prakash" target="_blank" class="profile-link">
-                          <span>View Profile</span>
-                          <ion-icon name="arrow-forward"></ion-icon>
+                  <div class="contact-item">
+                    <span class="contact-icon github-icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <div class="contact-details">
+                      <h3>GITHUB</h3>
+                      <p>
+                        <a href="https://github.com/jayaprakashroya" target="_blank" rel="noopener">
+                          jayaprakashroya
                         </a>
-                      </div>
-                    </div>
-                    <div class="profile-card github-card">
-                      <div class="profile-icon">
-                        <ion-icon name="logo-github"></ion-icon>
-                <div class="professional-profiles">
-                      <div class="profile-content">
-                        <h4>GitHub Portfolio</h4>
-                        <p>Explore my code and projects</p>
-                        <a href="https://github.com/jayaprakashmaneri" target="_blank" class="profile-link">
-                          <span>View Repository</span>
-                          <ion-icon name="arrow-forward"></ion-icon>
-                        </a>
-                      </div>
+                      </p>
                     </div>
                   </div>
-                </div>
-                  <h3>Professional Profiles</h3>
                 </div>
               </div>
+              <!-- Right: Contact Form -->
               <div class="send-message">
                 <h2>Send a Message</h2>
-                <form id="contactForm" class="message-form">
+                <form class="message-form">
                   <div class="form-row">
                     <div class="form-field">
-                      <label>Full Name</label>
-                      <input type="text" name="fullname" placeholder="Enter your name" required>
+                      <label for="name">Your Name</label>
+                      <input type="text" id="name" name="name" placeholder="Enter your name" required>
                     </div>
                     <div class="form-field">
-                      <label>Email Address</label>
-                      <input type="email" name="email" placeholder="Enter your email" required>
+                      <label for="email">Email Address</label>
+                      <input type="email" id="email" name="email" placeholder="Enter your email" required>
                     </div>
                   </div>
                   <div class="form-field">
-                    <label>Message</label>
-                    <textarea name="message" rows="5" placeholder="Tell me about your project, opportunity, or just say hello!" required></textarea>
+                    <label for="subject">Subject</label>
+                    <input type="text" id="subject" name="subject" placeholder="What's this about?" required>
                   </div>
-                  <button type="submit" class="send-button">
-                    <span>✈</span> Send Message
+                  <div class="form-field">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" placeholder="Tell me about your project, opportunity, or just say hello!" required></textarea>
+                  </div>
+                  <button class="send-button" type="submit">
+                    <span>&#9993;</span> Send Message
                   </button>
+                  <div class="form-message success">Your message was sent successfully!</div>
+                  <div class="form-message error">There was an error sending your message.</div>
                 </form>
-                <div id="formMessage" class="form-message"></div>
               </div>
             </div>
           </div>
