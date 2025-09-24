@@ -4,7 +4,8 @@
   const sidebarBtn = document.querySelector('[data-sidebar-btn]');
   const sidebarMore = document.querySelector('.sidebar-info_more');
   const contactForm = document.getElementById('contactForm');
-  const formMessage = document.getElementById('formMessage');
+  const successMessage = document.querySelector('.form-message.success');
+  const errorMessage = document.querySelector('.form-message.error');
 
   function showPage(name) {
     pages.forEach(p => {
@@ -36,22 +37,26 @@
     })();
     contactForm.addEventListener('submit', async (e) => {
       e.preventDefault();
-      formMessage.textContent = '';
-      formMessage.classList.remove('success', 'error');
+      if (successMessage) successMessage.style.display = 'none';
+      if (errorMessage) errorMessage.style.display = 'none';
+
       const formData = new FormData(contactForm);
       const templateParams = {
-        from_name: formData.get('fullname'),
+        from_name: formData.get('name'),
         from_email: formData.get('email'),
+        subject: formData.get('subject'),
         message: formData.get('message')
       };
       try {
-        const result = await emailjs.send('service_lojhawa', 'template_qkwsv9y', templateParams);
-        formMessage.textContent = 'Message sent successfully!';
-        formMessage.classList.add('success');
-        contactForm.reset();
+        await emailjs.send('service_lojhawa', 'template_qkwsv9y', templateParams);
+        if (successMessage) {
+          successMessage.style.display = 'block';
+          contactForm.reset();
+        }
       } catch (error) {
-        formMessage.textContent = 'Failed to send message. Please try again.';
-        formMessage.classList.add('error');
+        if (errorMessage) {
+          errorMessage.style.display = 'block';
+        }
       }
     });
   }

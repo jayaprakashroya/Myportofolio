@@ -40,7 +40,7 @@
           </li>
           <li class="contact-item">
             <div class="icon-box">
-              <ion-icon name="phone-portrait-outline"></ion-icon>
+              <ion-icon name="call-outline"></ion-icon>
             </div>
             <div class="contact-info">
               <p class="contact-title">Phone</p>
@@ -52,7 +52,7 @@
               <ion-icon name="calendar-outline"></ion-icon>
             </div>
             <div class="contact-info">
-              <p class="contact-title">Birthday</p>
+              <p class="contact-title">DOB</p>
               <time datetime="2005-07-14">14 July, 2005</time>
             </div>
           </li>
@@ -65,15 +65,7 @@
               <address>Puttaparthi, India</address>
             </div>
           </li>
-          <li class="contact-item">
-            <div class="icon-box">
-              <ion-icon name="document-outline"></ion-icon>
-            </div>
-            <div class="contact-info">
-              <p class="contact-title">Resume</p>
-              <a href="./assets/resume.pdf" class="contact-link" download>Download Resume</a>
-            </div>
-          </li>
+
         </ul>
         <div class="separator"></div>
         <ul class="social-list">
@@ -568,7 +560,7 @@
               <!-- Right: Contact Form -->
               <div class="send-message">
                 <h2>Send a Message</h2>
-                <form class="message-form">
+                <form class="message-form" id="contactForm">
                   <div class="form-row">
                     <div class="form-field">
                       <label for="name">Your Name</label>
@@ -590,8 +582,8 @@
                   <button class="send-button" type="submit">
                     <span>&#9993;</span> Send Message
                   </button>
-                  <div class="form-message success">Your message was sent successfully!</div>
-                  <div class="form-message error">There was an error sending your message.</div>
+                  <div class="form-message success" style="display:none;">Your message was sent successfully!</div>
+                  <div class="form-message error" style="display:none;">There was an error sending your message.</div>
                 </form>
               </div>
             </div>
